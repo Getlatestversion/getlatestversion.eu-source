@@ -1,5 +1,5 @@
-baseURL = "http://example.org/"
-languageCode = "en-gb"
+baseURL = "https://getlatestversion.github.io/"
+languageCode = "en-us"
 theme = "hugo-material-blog"
 DefaultContentLanguage = "en"
 
