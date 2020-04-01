@@ -1,0 +1,7 @@
+[submodule "themes/hugo-material-blog"]
+	path = themes/hugo-material-blog
+	url = https://github.com/Xzya/hugo-material-blog.git
+[submodule "public"]
+	path = public
+	url = https://github.com/Getlatestversion/getlatestversion.github.io.git
+	branch = master

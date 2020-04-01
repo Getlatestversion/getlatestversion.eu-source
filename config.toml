@@ -1,0 +1,101 @@
+baseURL = "http://example.org/"
+languageCode = "en-gb"
+theme = "hugo-material-blog"
+DefaultContentLanguage = "en"
+
+# Pagination
+paginate = 3
+paginatePath = "page"
+
+# Copyright, appears in the footer
+title = "Get Latest Version - Europe"
+copyright = "© 2020 GetLatestVersion"
+
+# Links format
+[permalinks]
+  post = "/:year/:month/:title/"
+
+
+# English
+[languages.en]
+  languageName = "English"
+  title = "Get Latest Version - Europe"
+
+  # Main menu
+  [[languages.en.menu.main]]
+    url = "/"
+    name = "Home"
+    weight = 1
+
+  # Footer menu 1
+  [[languages.en.menu.footer1]]
+    url = "#"
+    name = "Service 1"
+    weight = 1
+  [[languages.en.menu.footer1]]
+    url = "#"
+    name = "Service 2"
+    weight = 2
+
+  # Footer menu 2
+  [[languages.en.menu.footer2]]
+    url = "/"
+    name = "Home"
+    weight = 1
+  [[languages.en.menu.footer2]]
+    url = "/about/"
+    name = "About"
+    weight = 2
+
+  # Include menus in footer
+  [[languages.en.params.footer_menus]]
+    name = "Services"
+    menu = "footer2"
+  [[languages.en.params.footer_menus]]
+    name = "Links"
+    menu = "footer1"
+
+
+# Italiano
+[languages.it]
+  languageName = "Italiano"
+  title = "Get Latest Version - Italia"
+
+  # Main menu
+  [[languages.it.menu.main]]
+    url = "/it/"
+    name = "Casa"
+    weight = 1
+
+  # Footer menu 1
+  [[languages.it.menu.footer1]]
+    url = "#"
+    name = "Service 1"
+    weight = 1
+  [[languages.it.menu.footer1]]
+    url = "#"
+    name = "Service 2"
+    weight = 2
+
+  # Footer menu 2
+  [[languages.it.menu.footer2]]
+    url = "/it/"
+    name = "Casa"
+    weight = 1
+  [[languages.it.menu.footer2]]
+    url = "/about/"
+    name = "Chi siamo"
+    weight = 2
+
+  # Include menus in footer
+  [[languages.it.params.footer_menus]]
+    name = "Services"
+    menu = "footer2"
+  [[languages.it.params.footer_menus]]
+    name = "Links"
+    menu = "footer1"
+
+# Other params
+[params]
+  # Display post summaries instead of content in list templates (default: true)
+  # truncate = false
