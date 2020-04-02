@@ -1,7 +1,6 @@
 ---
 title: "Home"
 ---
+### Welcome!
 
-# Welcome!
-
-Lorem ipsum
+This text is visible on the Home Page.

@@ -1,0 +1,82 @@
+baseURL: "https://getlatestversion.github.io/"
+languageCode: "en-us"
+theme: "hugo-theme-zen"
+# defaultContentLanguage: "en"
+
+# Pagination
+paginate: 3
+paginatePath: "page"
+
+title: "Get Latest Version - Europe"
+
+# Links format
+permalinks:
+  post: "/:year/:month/:title/"
+
+
+languages:
+  # English
+  en:
+    weight: 1
+    languageName: "English"
+    title: "Get Latest Version - Europe"
+    menu:
+      main:
+        - identifier: search
+          name: "Search"
+          url: /search/
+          weight: -100
+  # Italiano
+  it:
+    weight: 2
+    languageName: "Italiano"
+    title: "Get Latest Version - Italia"
+    menu:
+      main:
+        - identifier: search
+          name: "Ricerca"
+          url: /search/
+          weight: -100
+
+
+# Other params
+params:
+  copyright: "© 2020 GetLatestVersion"
+  contact: "info@example.org"
+  dateformat: ""            # Set the date format, default to "2 January, 2006"
+  description: ""           # Set site description, used in meta tags and JSON-LD
+  favicon: ""               # Relative path to favicon in json feed, no leading slash.
+  feedlinks: true           # Show feed links in the footer.
+  footer: "A [example.org](https://example.org/) production."
+  icon: ""                  # Relative path to icon in json feed and JSON-LD, no leading slash.
+  image: ""                 # Relative path to site image in JSON-LD, no leading slash.
+  imageMaxWidth: ""         # Max width for images added via figure shortcode.
+  jquery: false             # Add jQuery
+  languageDir: ""           # Set ltr or rtl, defaults to ltr.
+  logo: true                # Turn on/off the logo.
+  mainSections:             # The sections you want to have listed on the front page.
+    - "Posts"               # Default to the section with most content if not set.
+    - "Articles"            # Set to empty if no section should be listed.
+  microUsername: ""         # Your micro.blog username.
+  mobileMenu: true          # Turn on a mobile menu on small screens.
+  piwikSiteId:              # Matamo site id
+  piwikTrackerUrl: ""       # Matamo url, schemaless and no slash on end (example.org/matamo).
+  poweredby: true           # Show powered by hugo in footer
+  realfavicongenerator:     # If full set of favicons, site manifest etc. exists, default false.
+  safariPinnedColor:        # Hex color value, used in meta tags, default "#000000".
+  searchLimit: 20           # Max number of search hits, default 20.
+  sidebar: true             # Show a sidebar to the right
+  submitted: true           # Show author and date information for a post.
+  themeColor:               # Hex color value, used in meta tags, default "#ffffff".
+
+
+outputFormats:
+  SearchIndex:
+    mediaType: "application/json"
+    baseName: "searchindex"
+    isPlainText: true
+    notAlternative: true
+
+outputs:
+  home: ["HTML", "SearchIndex"]
+

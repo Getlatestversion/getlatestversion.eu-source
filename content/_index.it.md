@@ -1,7 +1,6 @@
 ---
 title: "Home"
 ---
+### Benvenuti!
 
-# Benvenuti!
-
-Lorem ipsum
+Testo si vede nella home.

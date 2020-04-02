@@ -5,3 +5,5 @@ cover_image: "images/image1.jpeg"
 ---
 
 ## Chi siamo
+
+GLV.it nasce nel lontano...
