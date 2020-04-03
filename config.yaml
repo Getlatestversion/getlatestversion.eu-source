@@ -19,7 +19,7 @@ languages:
   en:
     weight: 1
     languageName: "English"
-    title: "Get Latest Version - Europe"
+    title: "GetLatestVersion.eu"
     menu:
       main:
         - identifier: search
@@ -30,7 +30,7 @@ languages:
   it:
     weight: 2
     languageName: "Italiano"
-    title: "Get Latest Version - Italia"
+    title: "GetLatestVersion.it"
     menu:
       main:
         - identifier: search
