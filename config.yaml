@@ -13,6 +13,10 @@ title: "Get Latest Version - Europe"
 permalinks:
   post: "/:year/:month/:title/"
 
+taxonomies:
+  category: categories
+  series: series
+  tag: tags
 
 languages:
   # English
@@ -26,6 +30,19 @@ languages:
           name: "Search"
           url: /search/
           weight: -100
+        - identifier: categories
+          name: "Categories"
+          url: /categories/
+          weight: -110
+        - identifier: tags
+          name: "Tags"
+          url: /tags/
+          weight: -120
+        - identifier: series
+          name: "Series"
+          url: /series/
+          weight: -130
+
   # Italiano
   it:
     weight: 2
@@ -37,6 +54,18 @@ languages:
           name: "Ricerca"
           url: /search/
           weight: -100
+        - identifier: categories
+          name: "Categorie"
+          url: /categories/
+          weight: -110
+        - identifier: tags
+          name: "Tag"
+          url: /tags/
+          weight: -120
+        - identifier: series
+          name: "Serie"
+          url: /series/
+          weight: -130
 
 
 # Other params
