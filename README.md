@@ -20,6 +20,7 @@ summary: 'hand written abstract that to appear in ToC'
 3. define which Front-matter fields
 4. Copyright
 5. `publishDate` and `--buildFuture`, what if any sensitive content, e.g. NDA
+6. Comments (Discus?)
 
 
 ## Coding tasks
@@ -28,3 +29,5 @@ summary: 'hand written abstract that to appear in ToC'
 2. EU Cookie policy
 3. URL format, with or without date?
 4. favicon and other fringes
+5. Comments
+6. Netlify CMS
