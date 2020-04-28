@@ -9,4 +9,4 @@ summary: 'Come organizzare il proprio account Azure DevOps'
 
 Breve pillola sul come organizzare il proprio account Azure DevOps con Team Project / Team ed organizations.
 
-{{< youtube id="a8kQIycCGkw" >}}
+{{< youtube id="sv700J3_Mwk" >}}
