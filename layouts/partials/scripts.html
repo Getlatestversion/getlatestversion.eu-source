@@ -1,0 +1,48 @@
+{{ if $.Param "jquery" -}}
+{{ $jquery := resources.Get "js/lib/jquery.slim.min.js" | fingerprint -}}
+<script defer src="{{ $jquery.RelPermalink }}"></script>
+{{ end -}}
+{{ $umbrella := resources.Get "js/lib/umbrella.min.js" | fingerprint -}}
+<script defer src="{{ $umbrella.RelPermalink }}"></script>
+{{ if $.Param "mobilemenu" -}}
+{{ $mobilemenu := resources.Get "js/mobile.js" | minify | fingerprint -}}
+<script defer src="{{ $mobilemenu.RelPermalink }}"></script>
+{{ end -}}
+{{ if $.Param "contactform" -}}
+{{ $contact := resources.Get "js/contact.js" | minify | fingerprint -}}
+<script defer src="{{ $contact.RelPermalink }}"></script>
+{{ end -}}
+{{ if $.Param "searchform" -}}
+{{ $flexsearch := resources.Get "js/lib/flexsearch.min.js" | fingerprint -}}
+<script defer src="{{ $flexsearch.RelPermalink }}"></script>
+{{ $search := resources.Get "js/search.js" | resources.ExecuteAsTemplate "js/search.js" . | minify | fingerprint -}}
+<script defer src="{{ $search.RelPermalink }}"></script>
+{{ end -}}
+{{ $script := resources.Get "js/script.js" | minify | fingerprint -}}
+<script defer src="{{ $script.RelPermalink }}"></script>
+
+<!--Customization-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="{{ "js/jquery-eu-cookie-law-popup.js" | absURL }}"></script>
+<link rel="stylesheet" href="{{ "css/jquery-eu-cookie-law-popup.css" | absURL }}">
+
+<script>
+  $( document ).ready(function() {
+
+    $(document).euCookieLawPopup().init({
+      cookiePolicyUrl : '/page/privacy/',
+      popupPosition : 'top',
+      colorStyle : 'default',
+      compactStyle : false,
+      popupTitle : 'This website is using cookies',
+      popupText : 'By continuing I assume your permission to deploy cookies, as detailed in the Privacy &amp; Cookies Policy.',
+      buttonContinueTitle : 'Continue',
+      buttonLearnmoreTitle : 'Learn more about this site Privacy &amp; Cookies Policy',
+      buttonLearnmoreOpenInNewWindow : true,
+      agreementExpiresInDays : 30,
+      autoAcceptCookiePolicy : false,
+      htmlMarkup : null
+    }); 
+  });
+
+</script>
