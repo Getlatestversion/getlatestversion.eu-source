@@ -1,7 +1,7 @@
 baseURL: "https://getlatestversion.github.io/"
 languageCode: "en-us"
 theme: "hugo-theme-zen"
-# defaultContentLanguage: "en"
+defaultContentLanguage: "en"
 
 # Pagination
 paginate: 3
@@ -15,8 +15,11 @@ permalinks:
 
 taxonomies:
   category: categories
-  series: series
+  # series: series
   tag: tags
+
+ignoreFiles:
+  - "post-examples"
 
 languages:
   # English
@@ -26,22 +29,22 @@ languages:
     title: "GetLatestVersion.eu"
     menu:
       main:
-        - identifier: search
-          name: "Search"
-          url: /search/
-          weight: -100
+        # - identifier: search
+        #   name: "Search"
+        #   url: /search/
+        #   weight: 100
         - identifier: categories
           name: "Categories"
           url: /categories/
-          weight: -110
+          weight: 110
         - identifier: tags
           name: "Tags"
           url: /tags/
-          weight: -120
-        - identifier: series
-          name: "Series"
-          url: /series/
-          weight: -130
+          weight: 120
+        # - identifier: series
+        #   name: "Series"
+        #   url: /series/
+        #   weight: 130
 
   # Italiano
   it:
@@ -50,33 +53,33 @@ languages:
     title: "GetLatestVersion.it"
     menu:
       main:
-        - identifier: search
-          name: "Ricerca"
-          url: /search/
-          weight: -100
+        # - identifier: search
+        #   name: "Ricerca"
+        #   url: /search/
+        #   weight: 100
         - identifier: categories
           name: "Categorie"
           url: /categories/
-          weight: -110
+          weight: 110
         - identifier: tags
           name: "Tag"
           url: /tags/
-          weight: -120
-        - identifier: series
-          name: "Serie"
-          url: /series/
-          weight: -130
+          weight: 120
+        # - identifier: series
+        #   name: "Serie"
+        #   url: /series/
+        #   weight: 130
 
 
 # Other params
 params:
-  copyright: "© 2020 GetLatestVersion"
-  contact: "info@example.org"
+  copyright: "© 2020 Get Latest Version"
+  contact: "info@getlatestversion.eu"
   dateformat: ""            # Set the date format, default to "2 January, 2006"
   description: ""           # Set site description, used in meta tags and JSON-LD
   favicon: ""               # Relative path to favicon in json feed, no leading slash.
   feedlinks: true           # Show feed links in the footer.
-  footer: "A [example.org](https://example.org/) production."
+  footer: "A [GetLatestVersion](https://www.getlatestversion.eu/) production. [Privacy policy](/page/privacy)"
   icon: ""                  # Relative path to icon in json feed and JSON-LD, no leading slash.
   image: ""                 # Relative path to site image in JSON-LD, no leading slash.
   imageMaxWidth: ""         # Max width for images added via figure shortcode.
@@ -99,13 +102,16 @@ params:
   themeColor:               # Hex color value, used in meta tags, default "#ffffff".
 
 
-outputFormats:
-  SearchIndex:
-    mediaType: "application/json"
-    baseName: "searchindex"
-    isPlainText: true
-    notAlternative: true
+## this trigger generation of Javascript search engine
+# outputFormats:
+#   SearchIndex:
+#     mediaType: "application/json"
+#     baseName: "searchindex"
+#     isPlainText: true
+#     notAlternative: true
 
+# outputs:
+#   home: ["HTML", "SearchIndex"]
 outputs:
-  home: ["HTML", "SearchIndex"]
+  home: ["HTML"]
 

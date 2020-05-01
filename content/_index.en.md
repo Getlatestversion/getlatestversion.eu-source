@@ -3,4 +3,4 @@ title: "Home"
 ---
 ### Welcome!
 
-This text is visible on the Home Page.
+GetLatestVersion is the oldest Italian community on DevOps, Application Lifecycle Management and Software Development Life-Cycle.

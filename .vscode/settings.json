@@ -1,0 +1,12 @@
+{
+    "spellright.language": [
+        "en-GB",
+        "en-US",
+        "it-IT"
+    ],
+    "spellright.documentTypes": [
+        "markdown",
+        "latex",
+        "plaintext"
+    ]
+}

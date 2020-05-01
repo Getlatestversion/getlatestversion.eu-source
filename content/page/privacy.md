@@ -2,7 +2,7 @@
 title: Privacy
 description: Privacy policy of site
 comments: false
-menu: main
+#menu: main
 ---
 
 ## List of Cookies used in this site
