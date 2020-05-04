@@ -1,0 +1,31 @@
+{{ define "main" -}}
+{{ $lang := .Lang }}
+{{ with index $.Site.Data.authors .Name }}
+<main class="main layout__main">
+<article class="{{ with .Section }}section-{{ . | urlize }} {{ end }}single-view">
+<header>
+<h1 class="title"><a name="_top">{{ .DisplayName }}</a></h1>
+</header>
+<div class="content">
+
+<p>{{ index .ShortBio $lang }}</p>
+<img alt="{{ .DisplayName }}" src="{{ .Picture }}">
+<table>
+{{ range .Social }}
+<tr> <td>{{ .Name }}</td> <td> <a href="{{ .Url }}">{{ .Value }}</a> </td> </tr>
+{{ end }}
+</table>
+
+
+{{ range .Pages }}
+<li>
+    {{ .Params.Title }}
+</li>
+{{ end }}
+{{ end }}
+
+
+</div>
+</article>
+</main>
+{{ end }}

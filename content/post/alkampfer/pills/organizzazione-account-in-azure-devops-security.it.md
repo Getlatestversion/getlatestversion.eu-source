@@ -1,7 +1,7 @@
 ---
 title: "Organizzazione account in Azure DevOps: Security"
 date: 2020-04-28T15:00:38+01:00
-author: "Gian Maria Ricci"
+authors: ['alkampfer']
 categories: ["Devops pills"]
 tags: ["devops", "pill"]
 summary: 'Come Azure DevOps utilizza i gruppi di security interni per gestire la sicurezza.'

@@ -1,0 +1,15 @@
+DisplayName: Gian Maria Ricci
+ShortBio:
+  en: Biography blah blah
+  it: Biografia ecc ecc
+Picture: "/images/_authors/alkampfer.jpg"
+Social:
+  - Name: Twitter
+    Value: '@alkampfer'
+    Url: https://twitter.com/alkampfer
+  - Name: GitHub
+    Value: alkampfergit
+    Url: https://github.com/alkampfergit
+  - Name: Web site
+    Value: http://www.codewrecks.com/blog/
+    Url: http://www.codewrecks.com/blog/

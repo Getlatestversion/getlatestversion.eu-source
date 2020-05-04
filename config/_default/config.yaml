@@ -14,6 +14,7 @@ taxonomies:
   category: categories
   # series: series
   tag: tags
+  author: authors
 
 ignoreFiles:
   - "post-examples"
@@ -38,10 +39,14 @@ languages:
           name: "Tags"
           url: /tags/
           weight: 120
+        - identifier: authors
+          name: "Authors"
+          url: /authors/
+          weight: 130
         # - identifier: series
         #   name: "Series"
         #   url: /series/
-        #   weight: 130
+        #   weight: 140
 
   # Italiano
   it:
@@ -62,10 +67,14 @@ languages:
           name: "Tag"
           url: /tags/
           weight: 120
+        - identifier: authors
+          name: "Autori"
+          url: /authors/
+          weight: 130
         # - identifier: series
         #   name: "Serie"
         #   url: /series/
-        #   weight: 130
+        #   weight: 140
 
 
 # Other params

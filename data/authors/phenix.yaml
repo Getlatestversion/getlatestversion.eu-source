@@ -1,0 +1,16 @@
+DisplayName: Michele Ferracin
+ShortBio:
+  en: Biography blah blah
+  it: Biografia ecc ecc
+Picture: "/images/_authors/phenix.jpg"
+Social:
+  - Name: Twitter
+    Value: '@phenixita'
+    Url: https://twitter.com/phenixita
+  - Name: Web site
+    Value: https://ilclubdellesei.blog/
+    Url: https://ilclubdellesei.blog/
+  - Name: YouTube
+    Value: Michele Ferracin 
+    Url: https://www.youtube.com/channel/UCVFIsXle1j5ghksvKbu5hVg
+    
