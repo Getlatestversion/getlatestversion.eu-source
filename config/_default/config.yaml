@@ -108,7 +108,6 @@ params:
 #     notAlternative: true
 
 # outputs:
-#   home: ["HTML", "SearchIndex"]
+#   home: ["HTML","RSS", "JSON", "SearchIndex"]
 outputs:
-  home: ["HTML"]
-
+  home: ["HTML","RSS", "JSON"]
