@@ -1,12 +1,13 @@
 ---
 title: "About"
 menu: "main"
-cover_image: "images/image1.jpeg"
 ---
+
+![Europe flag](/images/320px-Flag_of_Europe.svg.png)
 
 ## About Us
 
-GetLatestVersion.eu stems from GetLatestVersion.i, the successful Italian community specialised on DevOps, Application Lifecycle Management (ALM) and Software Development Life-Cycle (SDLC).
+GetLatestVersion.eu stems from GetLatestVersion.it, the successful Italian community specialised on DevOps, Application Lifecycle Management (ALM) and Software Development Life-Cycle (SDLC).
 
 ## What we do
 

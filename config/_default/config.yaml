@@ -6,8 +6,6 @@ defaultContentLanguage: "en"
 paginate: 3
 paginatePath: "page"
 
-title: "Get Latest Version - Europe"
-
 # Links format
 permalinks:
   post: "/:year/:month/:title/"
@@ -25,7 +23,7 @@ languages:
   en:
     weight: 1
     languageName: "English"
-    title: "GetLatestVersion.eu"
+    title: "Get Latest Version – Europe"
     menu:
       main:
         # - identifier: search
@@ -49,7 +47,7 @@ languages:
   it:
     weight: 2
     languageName: "Italiano"
-    title: "GetLatestVersion.it"
+    title: "GetLatestVersion – Italia"
     menu:
       main:
         # - identifier: search
@@ -78,7 +76,7 @@ params:
   description: ""           # Set site description, used in meta tags and JSON-LD
   favicon: ""               # Relative path to favicon in json feed, no leading slash.
   feedlinks: true           # Show feed links in the footer.
-  footer: "A [GetLatestVersion](https://www.getlatestversion.eu/) production. [Privacy policy](/page/privacy)"
+  footer: "A [GetLatestVersion](http://www.getlatestversion.eu/) production. [Privacy policy](/page/privacy)"
   icon: ""                  # Relative path to icon in json feed and JSON-LD, no leading slash.
   image: ""                 # Relative path to site image in JSON-LD, no leading slash.
   imageMaxWidth: ""         # Max width for images added via figure shortcode.

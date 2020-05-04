@@ -1,8 +1,9 @@
 ---
 title: "Chi siamo"
 menu: "main"
-cover_image: "images/image1.jpeg"
 ---
+
+![Italy flag](/images/320px-Flag_of_Italy.svg.png)
 
 ## Chi siamo
 
