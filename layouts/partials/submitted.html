@@ -1,6 +1,7 @@
 <div class="submitted">
 {{ range $author := $.Param "authors" }} {{ $profile := index $.Site.Data.authors $author }}
-<span class="author" itemprop="author">{{ $profile.DisplayName }}</span>
+<a href="{{ path.Join "/authors/" $author | relLangURL }}">
+<span class="author" itemprop="author">{{ $profile.DisplayName }}</span></a>
 {{ end }}
 - <time class="created-date" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format ($.Param "dateformat" | default "2 January, 2006") }}</time>
 </div>
