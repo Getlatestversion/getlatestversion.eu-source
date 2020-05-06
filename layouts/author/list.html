@@ -8,7 +8,7 @@
 </header>
 <div class="content">
 
-<p>{{ index .ShortBio $lang }}</p>
+<p>{{ index .ShortBio $lang | markdownify }}</p>
 <img alt="{{ .DisplayName }}" src="{{ .Picture }}">
 <table>
 {{ range .Social }}
