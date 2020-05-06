@@ -1,0 +1,21 @@
+DisplayName: Matteo Emili
+ShortBio:
+  en: "I am a Manager for Software Engineering at Avanade UK&I, as well as a Microsoft MVP. I love how technology acts as a tool to solve a complex business problem, ultimately bringing benefits to a company."
+  it: "Lavoro in Avanade UK&I, oltre ad essere un Microsoft MVP."
+Picture: "/images/_authors/mattvsts.jpg"
+Social:
+  - Name: Blog
+    Value: Dapper DevOps
+    Url: https://mattvsts.github.io/
+  - Name: MVP Profile
+    Value: Matteo Emili
+    Url: https://mvp.microsoft.com/en-us/PublicProfile/4027206?fullName=Matteo%20Emili
+  - Name: GitHub
+    Value: GitHub
+    Url: https://github.com/mattvsts
+  - Name: Twitter
+    Value: MattVSTS
+    Url: https://twitter.com/mattvsts
+  - Name: Linkedin
+    Value: Matteo Emili
+    Url: https://www.linkedin.com/in/matteoemili/
