@@ -1,0 +1,20 @@
+DisplayName: Giulio Vian
+ShortBio:
+  en: |
+    Mr. Giulio Vian is a multi-disciplinary software engineer with strong experience on production environments and extensive experience of enterprise contexts. Currently works at [Unum](https://www.unum.com/) helping teams improving their DevOps capabilities.
+    Speaker at international conferences, he was awarded Microsoft Most Valuable Professional on Azure DevOps category in the last four years.
+  it: |
+    Esperto nell’area dell’Application Lifecycle Management (ALM), in particolare con Team Foundation Server (TFS); fa parte del gruppo mondiale degli Visual Studio ALM Rangers che contribuiscono con linee guida e soluzioni estemporanee per TFS.
+    Ha una esperienza pluri-decennale sulla piattaforma Microsoft, in particolare per lo sviluppo di applicazioni. A suo agio in ruoli architetturali, eccelle nel connettere gruppi diversi e bilanciare tra esigenze discordi.
+    Ciò che mi piace di più è condividere le esperienze ed aiutare gli altri nel migliorare le proprie abilità e crescere nel novero delle conoscenze per arrivare al successivo gradino di competenze.
+Picture: "/images/_authors/giuliov.jpg"
+Social:
+  - Name: Twitter
+    Value: '@giulio_vian'
+    Url: https://twitter.com/giulio_vian
+  - Name: GitHub
+    Value: giuliov
+    Url: https://github.com/giuliov
+  - Name: Web site
+    Value: https://blog.casavian.eu
+    Url: https://blog.casavian.eu
