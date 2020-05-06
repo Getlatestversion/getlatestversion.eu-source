@@ -57,23 +57,23 @@ languages:
       main:
         # - identifier: search
         #   name: "Ricerca"
-        #   url: /search/
+        #   url: /it/search/
         #   weight: 100
         - identifier: categories
           name: "Categorie"
-          url: /categories/
+          url: /it/categories/
           weight: 110
         - identifier: tags
           name: "Tag"
-          url: /tags/
+          url: /it/tags/
           weight: 120
         - identifier: authors
           name: "Autori"
-          url: /authors/
+          url: /it/authors/
           weight: 130
         # - identifier: series
         #   name: "Serie"
-        #   url: /series/
+        #   url: /it/series/
         #   weight: 140
 
 
