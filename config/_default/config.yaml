@@ -118,5 +118,24 @@ params:
 
 # outputs:
 #   home: ["HTML","RSS", "JSON", "SearchIndex"]
+
+mediaTypes:
+  text/html:
+    suffixes:
+    - html
+  text/html+custom:
+    suffixes:
+    - htm
+
 outputs:
   home: ["HTML","RSS", "JSON"]
+  taxonomy: ["HTML","RSS","AUTHORPOSTS"]
+
+outputFormats:
+  HTML:
+    mediaType: "text/html"
+  AUTHORPOSTS:
+    mediaType: "text/html+custom"
+    baseName: "authorposts"
+    isPlainText: false
+    notAlternative: true

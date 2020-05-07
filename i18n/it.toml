@@ -22,6 +22,9 @@ other = "Aggiornato al:"
 [created]
 other = "Creato il:"
 
+[authors]
+other = "Autori"
+
 [back_to_top]
 other = "Torna su"
 
