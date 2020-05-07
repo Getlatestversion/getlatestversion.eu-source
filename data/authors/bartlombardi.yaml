@@ -1,0 +1,12 @@
+DisplayName: Bartolomeo Lombardi
+ShortBio:
+  en: "Hi! I'm a Software Developer based in Bologna, Italy and I graduated cum Laude in Computer Science, a subject that i really love. I'm a professional in software practice with 4+ years of experience; my focus is providing and proposing solutions involved in software development thought Agile Methodologies…I'm a DevOps culture enthusiast!"
+  it: "Ciao! Sono uno sviluppatore software Italiano ed ho conseguito una laurea con lode in informatica, la materia che amo di più. Ho esperienza professionale nell'ambito software da 4+ anni; la mia attenzione si pone nel proporre e fornire soluzioni nell'ambito dello sviluppo software con inclinazione verso le metodologie Agile...Mi definisco un mentore della cultura DevOps!"
+Picture: "/images/_authors/bartlombardi.jpg"
+Social:
+  - Name: GitHub
+    Value: GitHub
+    Url: https://github.com/bartlombardi
+  - Name: Linkedin
+    Value: Bartolomeo Lombardi
+    Url: https://www.linkedin.com/in/bartolomeo-lombardi/
