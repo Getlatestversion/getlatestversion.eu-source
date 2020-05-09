@@ -1,5 +1,5 @@
 
-# Get Latest Version public site
+# GetLatestVersion public site
 
 This repo holds the Hugo source files for [www.getlatestversion.eu](http://www.getlatestversion.eu)
 

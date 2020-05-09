@@ -24,7 +24,7 @@ languages:
   en:
     weight: 1
     languageName: "English"
-    title: "Get Latest Version – Europe"
+    title: "GetLatestVersion – Europe"
     menu:
       main:
         # - identifier: search
@@ -79,7 +79,7 @@ languages:
 
 # Other params
 params:
-  copyright: "© 2020 Get Latest Version"
+  copyright: "© 2020 GetLatestVersion"
   contact: "info@getlatestversion.eu"
   dateformat: ""            # Set the date format, default to "2 January, 2006"
   description: ""           # Set site description, used in meta tags and JSON-LD
