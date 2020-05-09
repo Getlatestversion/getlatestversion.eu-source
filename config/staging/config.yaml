@@ -1,1 +1,11 @@
-baseURL: "http://staging.getlatestversion.eu/"
+# baseURL: "http://staging.getlatestversion.eu/"
+baseURL: "https://stagegetlatestversioneu.z6.web.core.windows.net/"
+
+deployment:
+  # By default, files are uploaded in an arbitrary order.
+  # Files that match the regular expressions in the "Order" list
+  # will be uploaded first, in the listed order.
+  order: [".jpg$", ".gif$", ".png$"]
+  targets:
+    name: "staging"
+    URL: "azblob://$web"
