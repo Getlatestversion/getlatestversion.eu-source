@@ -17,6 +17,6 @@ jobs:
           url: 'https://raw.githubusercontent.com/Getlatestversion/getlatestversion.github.io/master/announce.data'
           method: 'GET'
     - run: |
-          $output = '${{ steps.announce_data.outputs.response }}' | ConvertFrom-Json
+          $output = $steps.announce_data.outputs.response
           Write-Host "Time from output $($output.publish-info.cut-over-date)" 
  
