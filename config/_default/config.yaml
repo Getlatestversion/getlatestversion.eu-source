@@ -120,9 +120,6 @@ params:
 #   home: ["HTML","RSS", "JSON", "SearchIndex"]
 
 mediaTypes:
-  text/html:
-    suffixes:
-    - html
   text/html+custom:
     suffixes:
     - htm
@@ -132,10 +129,10 @@ outputs:
   taxonomy: ["HTML","RSS","AUTHORPOSTS"]
 
 outputFormats:
-  HTML:
-    mediaType: "text/html"
-  AUTHORPOSTS:
+  authorposts:
     mediaType: "text/html+custom"
     baseName: "authorposts"
     isPlainText: false
+    isHTML: true
     notAlternative: true
+    permalinkable: true
