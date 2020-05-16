@@ -106,10 +106,20 @@ params:
   sidebar: true             # Show a sidebar to the right
   submitted: true           # Show author and date information for a post.
   themeColor:               # Hex color value, used in meta tags, default "#ffffff".
+  announceCutOver: -100 # days
 
 
+mediaTypes:
+  'application/announce':
+    suffixes: ["data"]
+
+outputFormats:
+  announce:
+    mediaType: "application/announce"
+    baseName: "announce"
+    isPlainText: true
+    notAlternative: true
 ## this trigger generation of Javascript search engine
-# outputFormats:
 #   SearchIndex:
 #     mediaType: "application/json"
 #     baseName: "searchindex"
@@ -119,4 +129,4 @@ params:
 # outputs:
 #   home: ["HTML","RSS", "JSON", "SearchIndex"]
 outputs:
-  home: ["HTML","RSS", "JSON"]
+  home: ["HTML","RSS","JSON","ANNOUNCE"]
