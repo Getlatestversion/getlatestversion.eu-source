@@ -1,7 +1,7 @@
 name: publish-on-social
 
 on:
-  push:
+  push:.cut-over-date
     branches:
       - master
 #  schedule:
@@ -16,5 +16,9 @@ jobs:
       with:
           url: 'https://raw.githubusercontent.com/Getlatestversion/getlatestversion.github.io/master/announce.data'
           method: 'GET'
-    - run: " echo ${{ parseJSON(steps.announce_data.outputs.response).publish-info.cut-over-date }}"
+    - name: Set Output
+      id: set
+      run: echo ::set-output name=json_var::'${{ steps.announce_data.outputs.response }}'
+    - name: Use Output
+      run: "echo ${{ steps.set.outputs.json_var.publish-info.cut-over-date }}"
 
