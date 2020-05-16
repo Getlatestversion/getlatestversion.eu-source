@@ -20,5 +20,6 @@ jobs:
       id: set
       run: echo ::set-output name=json_var::'${{ steps.announce_data.outputs.response }}'
     - name: Use Output
-      run: "echo ${{ steps.set.outputs.json_var.publish-info.cut-over-date }}"
+      run: |
+        echo $json_var | jq '.publish-info.cut-over-date'
 
