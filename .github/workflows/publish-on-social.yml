@@ -16,6 +16,5 @@ jobs:
       with:
           url: 'https://raw.githubusercontent.com/Getlatestversion/getlatestversion.github.io/master/announce.data'
           method: 'GET'
-    - run: echo ::set-output name=output::'${{steps.announce_data.outputs.response}}'
-    - run: echo "${{output.publish-info.cut-over-date}}"
+    - run: " echo ${{ parseJSON(steps.announce_data.outputs.response).publish-info.cut-over-date }}"
 
