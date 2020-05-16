@@ -1,0 +1,24 @@
+DisplayName: Alessandro Alpi
+ShortBio:
+  en: "CTO and co-founder of Engage IT Services Srl. I am responsible for the team's management, the database lifecycle management and the DevOps processes. Father, reader, addicted to Lego."
+  it: "Sono CTO e co-fondatore di Engage IT Services Srl. Mi occupo della gestione del team di sviluppo, del ciclo di vita del software lato database, nonchè dei processi DevOps. Padre, lettore accanito, maniaco dei lego."
+Picture: "/images/_authors/suxstellino.jpg"
+Social:
+  - Name: Web site
+    Value: https://alessandroalpi.blog/
+    Url: https://alessandroalpi.blog/
+  - Name: Private blog
+    Value: Medium
+    Url: https://medium.com/@suxstellino
+  - Name: MVP Profile
+    Value: Alessandro Alpi
+    Url: https://mvp.microsoft.com/it-it/PublicProfile/4014222?fullName=Alessandro%20Alpi
+  - Name: github
+    Value: suxstellino
+    Url: https://github.com/suxstellino
+  - Name: Twitter
+    Value: '@suxstellino'
+    Url: https://twitter.com/suxstellino
+  - Name: Linkedin
+    Value: Alessandro Alpi
+    Url: https://www.linkedin.com/in/suxstellino/
