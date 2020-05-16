@@ -1,0 +1,20 @@
+name: publish-on-social
+
+on:
+  push:
+    branches:
+      - master
+  schedule:
+    - cron: '0 4 * * *'
+
+jobs:
+  deploy:
+    runs-on: ubuntu-18.04
+    steps:
+    - uses: fjogeleit/http-request-action@master
+      id: announce_data
+      with:
+          url: 'https://raw.githubusercontent.com/Getlatestversion/getlatestversion.github.io/master/announce.data'
+          method: 'GET'
+    - run: "echo announce data: ${{ steps.announce_data.outputs.response }}"
+ 
