@@ -1,3 +1,6 @@
 baseURL: "http://www.getlatestversion.eu/"
 googleAnalytics: "UA-165859091-1"
 disqusShortname: "www-getlatestversion-eu"
+
+params:
+  announceCutOver: -1 # days
