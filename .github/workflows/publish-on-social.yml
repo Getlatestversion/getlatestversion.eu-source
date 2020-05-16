@@ -1,7 +1,7 @@
 name: publish-on-social
 
 on:
-  push:.cut-over-date
+  push:
     branches:
       - master
 #  schedule:
