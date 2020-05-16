@@ -34,55 +34,55 @@ Modify the tool, adapting its shape in order to fit in with that real scenario. 
 
 To create a team in Azure DevOps is really a piece of cake (according to the latest releases). Just navigate to the options and select _Teams_:
 
-![image.png](/static/images/suxstellino/post01-01-team-on-azuredevops.png)
+![image.png](post01-01-team-on-azuredevops.png)
 
 We can add many teams clicking on _New team_:
 
-![image.png](/static/images/suxstellino/post01-02-new-team.png)
+![image.png](post01-02-new-team.png)
 
 We can set the team's administrators, the permission set and an area under which every work item will be created. This area will be one of our best friends, especially when we will make our queries for gathering and analyzing the team's related data. Additionally, also the other teams' members could create items with this area in order to make the OpsTeam aware of them.
 
 Team's backlog
 Now let's navigate to Backlogs:
 
-![image.png](/static/images/suxstellino/post01-03-backlogs.png)
+![image.png](post01-03-backlogs.png)
 
 Good! The new backlog has been created. Going on it, we will see the team's drop-down as well as the one for iterations. Great feature!
 
-![image.png](/static/images/suxstellino/post01-04-sprints.png)
+![image.png](post01-04-sprints.png)
 
 Once created, we will see the teams' drop-down:
 
-![image.png](/static/images/suxstellino/post01-05-team-switch.png)
+![image.png](post01-05-team-switch.png)
 
 ### Work items
 
 Now, let's create a new work item type. We call it Ops item. Navigate to Process customization page:
 
-![image.png](/static/images/suxstellino/post01-06-process.png)
+![image.png](post01-06-process.png)
 
 Before adding the new work item, we must ensure that the process is already a custom process, otherwise, all the edits will be blocked as shown in the following picture:
 
-![image.png](/static/images/suxstellino/post01-07-process-custom.png)
+![image.png](post01-07-process-custom.png)
 
 We've already created a SimplifiedScrum process. let's add our item now:
 
-![image.png](/static/images/suxstellino/post01-07-workitemtype.png)
+![image.png](post01-07-workitemtype.png)
 
 Now we are going to modify the fields of the new type. Each team should be able to understand all the item's properties. We will leave the item as is in this example. Then, we have to map the type to the backlog item list, since only the default work item types are shown initially. To do this, navigate to the Process customization page, Backlog Levels tab:
 
-![image.png](/static/images/suxstellino/post01-08-process-add-workitemtype-1.png)
-![image.png](/static/images/suxstellino/post01-09-process-add-workitemtype-2.png)
+![image.png](post01-08-process-add-workitemtype-1.png)
+![image.png](post01-09-process-add-workitemtype-2.png)
 
 As we can see, we can also set the default item for our requirements backlog. Moreover, every Sprint backlog, based on iterations, will enable us to add the new Ops item:
 
-![image.png](/static/images/suxstellino/post01-10-new-workitem.png)
+![image.png](post01-10-new-workitem.png)
 
 ### Wrapping up
 
 So, we've got a backlog for the IT Operations team's members. Then, we've related it to their Azure DevOps team. Additionally, we've got a particular work item type (not mandatory, but really useful for querying it or adding it into dashboards) target of IT Operations' job and a dedicated Area Path. We can make many relationships between items of both our backlogs. Here is an example of how an activity can be managed and organized (extension: [Work Item Visualize](https://marketplace.visualstudio.com/items?itemName=ms-devlabs.WorkItemVisualization)):
 
-![image.png](/static/images/suxstellino/post01-11-workitem-visualize.png)
+![image.png](post01-11-workitem-visualize.png)
 
 As you can see, the Ops items are _Successor_ of the "development" Product backlog items. Indeed, the Ops Items will be finished after the PBI, typically. Think about creating s DNS or a network path to let the production app work in production.
 
