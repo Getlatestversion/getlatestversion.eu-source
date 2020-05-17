@@ -34,7 +34,7 @@ Reader, If you change the code on Solution B and you have to commit the code tog
 We can make those binaries available in several ways.
 
 ### Git repository
-A first possibility consists in commit them into a repository anytime a merge into the development/master branch by means of the CI build pipeline is requested by a Pull Request. Of course, this increases the size of the repository introducing significant slowdown checkout times and performances. Imagine what could happen if teams work on different branches ending up using different versions of the same binaries creating merge conflicts.
+A first possibility consists in commit them into a repository anytime a merge into the development/master branch by means of the Continuous Integration build pipeline is requested by a Pull Request. Of course, this increases the size of the repository introducing significant slowdown checkout times and performances. Imagine what could happen if teams work on different branches ending up using different versions of the same binaries creating merge conflicts.
 
 ### File share
 Another option consists of putting the binaries onto a file share. In this case, however, there is no index for quickly finding binaries and there is no protection against overriding a version.
