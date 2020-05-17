@@ -25,5 +25,5 @@ jobs:
         posts: "posts"
     - name: Print Output
       run: |
-        "echo ${{ steps.json-convert.outputs.publish-info }}"
+        "echo '${{ steps.json-convert.outputs.publish-info }}'"
 
