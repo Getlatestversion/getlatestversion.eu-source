@@ -1,5 +1,5 @@
 
-# Get Latest Version public site
+# GetLatestVersion public site
 
 This repo holds the Hugo source files for [www.getlatestversion.eu](http://www.getlatestversion.eu)
 
@@ -13,8 +13,9 @@ $env:AZURE_STORAGE_ACCOUNT="stagegetlatestversioneu"
 $env:AZURE_STORAGE_KEY="**********"
 $env:HUGO_ENVIRONMENT='staging'
 
-hugo --gc --cleanDestinationDir
-hugo deploy --maxDeletes -1
+hugo --gc --cleanDestinationDir ; hugo deploy --maxDeletes -1
+
+rm -Recurse .\public\ ; md public ; hugo deploy --maxDeletes -1
 ```
 
 <https://stagegetlatestversioneu.z6.web.core.windows.net/>

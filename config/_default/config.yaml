@@ -24,7 +24,7 @@ languages:
   en:
     weight: 1
     languageName: "English"
-    title: "Get Latest Version – Europe"
+    title: "GetLatestVersion – Europe"
     menu:
       main:
         # - identifier: search
@@ -79,7 +79,7 @@ languages:
 
 # Other params
 params:
-  copyright: "© 2020 Get Latest Version"
+  copyright: "© 2020 GetLatestVersion"
   contact: "info@getlatestversion.eu"
   dateformat: ""            # Set the date format, default to "2 January, 2006"
   description: ""           # Set site description, used in meta tags and JSON-LD
@@ -106,10 +106,20 @@ params:
   sidebar: true             # Show a sidebar to the right
   submitted: true           # Show author and date information for a post.
   themeColor:               # Hex color value, used in meta tags, default "#ffffff".
+  announceCutOver: -100 # days
 
 
+mediaTypes:
+  'application/announce':
+    suffixes: ["data"]
+
+outputFormats:
+  announce:
+    mediaType: "application/announce"
+    baseName: "announce"
+    isPlainText: true
+    notAlternative: true
 ## this trigger generation of Javascript search engine
-# outputFormats:
 #   SearchIndex:
 #     mediaType: "application/json"
 #     baseName: "searchindex"
@@ -125,7 +135,7 @@ mediaTypes:
     - htm
 
 outputs:
-  home: ["HTML","RSS", "JSON"]
+  home: ["HTML","RSS", "JSON","ANNOUNCE"]
   taxonomy: ["HTML","RSS","AUTHORPOSTS"]
 
 outputFormats:

@@ -1,7 +1,15 @@
 DisplayName: Gian Maria Ricci
 ShortBio:
-  en: Biography blah blah
-  it: Biografia ecc ecc
+  en: |
+    I'm an electronic Engineer, but passionate about programming since my first Vic 20. I work as consultant in Italy
+    helping companies to solve both technical problems and Application Lifecycle Management. I'm Microsoft MVP in 
+    Developer technologies, with a special expertise in TFS/Azure DevOps tooling. I've a special interest in Security
+    especially in defensive and Application Security.
+  it: |
+    Sebbene sia un ingegnere elettronico come formazione, da sempre sono appassionato di programmazione e di qualsiasi
+    cosa orbiti attorno al mondo della tecnologia informatica. Svolgo libera professione in Italia ed aiuto i miei clienti
+    ad adottare una corretta strategia di sviluppo software, oltre che occuparmi della risoluzione di problematiche
+    tecniche. Ho una passione speciale per la sicurezza, ed in generale ciò che ruota attorno alla privacy digitale. 
 Picture: "/images/_authors/alkampfer.jpg"
 Social:
   - Name: Twitter
@@ -11,5 +19,8 @@ Social:
     Value: alkampfergit
     Url: https://github.com/alkampfergit
   - Name: Web site
-    Value: http://www.codewrecks.com/blog/
-    Url: http://www.codewrecks.com/blog/
+    Value: http://www.codewrecks.com/
+    Url: http://www.codewrecks.com/
+  - Name: Linkedin
+    Value: https://www.linkedin.com/in/gianmariaricci
+    Url: https://www.linkedin.com/in/gianmariaricci

@@ -1,5 +1,9 @@
 # baseURL: "http://staging.getlatestversion.eu/"
 baseURL: "https://stagegetlatestversioneu.z6.web.core.windows.net/"
+disqusShortname: "staging-getlatestversion-eu"
+
+params:
+  announceCutOver: -10 # days
 
 deployment:
   # By default, files are uploaded in an arbitrary order.

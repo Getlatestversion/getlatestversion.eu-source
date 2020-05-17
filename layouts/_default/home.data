@@ -1,0 +1,48 @@
+{{- $cutDate := now.AddDate 0 0 $.Site.Params.announceCutOver -}}
+{{- $pctx := . -}}
+{{- if .IsHome -}}{{ $pctx = .Site }}{{- end -}}
+{{- $pages := where $pctx.RegularPages "Date" "ge" $cutDate -}}
+{{- $plength := (len $pages) -}}
+{
+  "publish-info": {
+    "cut-over-date": "{{ $cutDate }}"
+  },
+  "posts": [
+    {{- range $pindex, $pelem := $pages }}
+    {
+      "lang": "{{ .Lang }}",
+      "title": "{{ .Title }}",
+      "link": "{{ .Permalink }}",
+      "date": "{{ .Date }}",
+      "summary": "{{ .Summary }}",
+      "authors": [
+        {{- $authors := .Params.authors -}}
+        {{- $alength := (len $authors) -}}
+        {{- range $aindex, $aelem := $authors }}
+        {{- $nick := . -}}
+        {{- with index $.Site.Data.authors $nick }}
+        {
+          "nick": "{{ $nick }}",
+          "name": "{{ .DisplayName }}",
+          "social": {
+          {{- $social := .Social -}}
+          {{- $slength := (len $social) -}}
+          {{- range $sindex, $selem := $social }}
+            "{{ .Name | urlize }}": {
+              "name": "{{ .Value }}",
+              "url": "{{ .Url }}"
+            }
+            {{- if ne (add $sindex 1) $slength }},{{ end -}}
+          {{- end }}
+          }
+        }
+        {{- end -}}
+
+        {{- if ne (add $aindex 1) $alength }},{{ end }}
+        {{- end -}}
+      ]
+    }{{ if ne (add $pindex 1) $plength }},{{ end }}
+    {{- end -}}
+  ]
+}
+
