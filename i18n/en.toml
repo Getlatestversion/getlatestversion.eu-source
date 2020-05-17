@@ -1,3 +1,6 @@
 
 [authors]
 other = "Authors"
+
+[author_all_posts]
+other = "All posts"
