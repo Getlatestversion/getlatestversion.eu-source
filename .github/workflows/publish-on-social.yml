@@ -21,9 +21,9 @@ jobs:
       id: json-convert        
       with:
         json: ${{ steps.announce_data.outputs.response }}
-        publish-info: "publish-info"
+        publish-info: "publish-info.cut-over-date"
         posts: "posts"
     - name: Print Output
       run: |
-        echo '${{ steps.json-convert.outputs.publish-info }}' | jq '.'
+        "echo ${{ steps.json-convert.outputs.publish-info }}"
 
