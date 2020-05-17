@@ -16,10 +16,14 @@ jobs:
       with:
           url: 'https://raw.githubusercontent.com/Getlatestversion/getlatestversion.github.io/master/announce.data'
           method: 'GET'
-    - name: Set Output
-      id: set
-      run: echo ::set-output name=json_var::'${{ steps.announce_data.outputs.response }}'
-    - name: Use Output
+    - name: Convert to JSON object
+      uses: gr2m/get-json-paths-action@v1.x
+      id: json-convert        
+      with:
+        json: ${{ steps.announce_data.outputs.response }}
+        publish-info: "publish-info"
+        posts: "posts"
+    - name: Print Output
       run: |
-        echo '${{ steps.set.outputs.json_var }}' | jq '.publish-info'
+        echo '${{ steps.json-convert.outputs.publish-info }}' | jq '.'
 
