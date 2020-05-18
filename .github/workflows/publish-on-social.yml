@@ -23,6 +23,6 @@ jobs:
     needs: prepare-annunce
     runs-on: ubuntu-18.04
     strategy:
-      matrix: fromJson(${{ needs.prepare-annunce.outputs.matrix }})
+      matrix: ${{ fromJson(needs.prepare-annunce.outputs.matrix) }}
     steps:
     - run: echo "${{ needs.prepare-annunce.outputs.matrix }}"
