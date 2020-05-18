@@ -21,12 +21,18 @@ jobs:
         with:
             url: '${{ secrets.GLV_SITE_ANNOUNCE_DATA }}'
             method: 'GET'
-      - name: Traslate annunce attribute 'title' into array
+      - name: Extract from annunce the values of attribute 'title' 
+        id: annunce-list-title
+        run: echo "::set-output name=list::'${{ steps.read-announce-data.outputs.response }}' | jq -c '.posts[].title'"
+      - name: Extract from annunce the values of attribute 'url'
+        id: annunce-list-url
+        run: echo "::set-output name=list::'${{ steps.read-announce-data.outputs.response }}' | jq -c '.posts[].title'"
+      - name: Convert title list into annunce-title array 
         id: annunce-title
-        run: "echo '$(echo \"${{ steps.read-announce-data.outputs.response }}\" | jq -c \".posts[].title\")'| jq -s"
-      - name: Traslate annunce attribute 'url' into array
+        run: echo "::set-output name=array::'${{ steps.annunce-list-title.outputs.list }}' | jq -s "
+      - name: Convert url list into annunce-url array 
         id: annunce-url
-        run: "echo '$(echo \"${{ steps.read-announce-data.outputs.response }}\" | jq -c \".posts[].url\")' | js -s"
+        run: echo "::set-output name=array::'${{ steps.annunce-list-url.outputs.list }}' | jq -s "
 
   publish-matrix:
     needs: prepare-annunce
