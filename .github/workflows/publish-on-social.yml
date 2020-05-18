@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-18.04
     outputs:
       matrix.titles: ${{toJson(fromJson(${{steps.read-announce-data.outputs.response}}).posts[].title)}}
-      matrix.urls: ${{toJson(fromJson(${{steps.read-announce-data.outputs.response}}).posts[].title)}}
+      matrix.urls: ${{toJson(fromJson(${{steps.read-announce-data.outputs.response}}).posts[].url)}}
 
     steps:
       - name: Read from GLV site the annunces posts and article
