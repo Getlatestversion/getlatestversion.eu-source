@@ -15,13 +15,13 @@ jobs:
     steps:
       - name: Read from GLV site the annunces posts and article
         uses: fjogeleit/http-request-action@master
-        id: read-announce_data
+        id: read-announce-data
         with:
             url: '${{ secrets.GLV_SITE_ANNOUNCE_DATA }}'
             method: 'GET'
       - name: set output matrix with posts array
         id: set-annunce-matrix
-        run: "::set-output name=matrix::echo '${{ steps.announce_data.outputs.response }}' | jq -c '.posts'"
+        run: ::set-output name=matrix::"echo '${{ steps.read-announce-data.outputs.response }}' | jq -c '.posts'"
   publish-matrix:
     needs: prepare-annunce
     runs-on: ubuntu-18.04
