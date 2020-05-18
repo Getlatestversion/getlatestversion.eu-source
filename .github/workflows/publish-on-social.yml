@@ -21,7 +21,7 @@ jobs:
             method: 'GET'
       - name: Traslate annunce objects into attributes array
         id: traslate-object-2-array
-        run: echo "::set-output name=matrix.title::$(echo ${{steps.read-announce-data.outputs.response}}|jq -c '.posts[].title'| jq -s)" ; echo "::set-output name=matrix.url::$(echo ${{steps.read-announce-data.outputs.response}}|jq -c '.posts[].url'| jq -s)"
+        run: echo "::set-output name=matrix.title::$(echo '${{ steps.read-announce-data.outputs.response }}'|jq -c '.posts[].title'| jq -s)" ; echo "::set-output name=matrix.url::$(echo '${{ steps.read-announce-data.outputs.response }}'|jq -c '.posts[].url'| jq -s)"
 
   publish-matrix:
     needs: prepare-annunce
