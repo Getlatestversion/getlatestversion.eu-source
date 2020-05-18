@@ -23,10 +23,10 @@ jobs:
             method: 'GET'
       - name: Traslate annunce attribute 'title' into array
         id: annunce-title
-        run: "echo '${{ steps.read-announce-data.outputs.response }}'|jq -c '.posts[].title'|::set-output name=array:: js -s"
+        run: "echo '${{ steps.read-announce-data.outputs.response }}'|jq -c '.posts[].title'| js -s"
       - name: Traslate annunce attribute 'url' into array
         id: annunce-url
-        run: "echo '${{ steps.read-announce-data.outputs.response }}'|jq -c '.posts[].url'|::set-output name=array:: js -s"
+        run: "echo '${{ steps.read-announce-data.outputs.response }}'|jq -c '.posts[].url'| js -s"
 
   publish-matrix:
     needs: prepare-annunce
