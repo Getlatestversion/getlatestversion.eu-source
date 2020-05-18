@@ -27,4 +27,5 @@ jobs:
       run: |
           echo "${{ steps.json-convert.outputs.publish-info }}";
           echo "${{ steps.json-convert.outputs.posts }}"
+          
 
