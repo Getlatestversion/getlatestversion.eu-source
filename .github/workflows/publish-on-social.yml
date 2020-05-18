@@ -11,7 +11,9 @@ jobs:
   prepare-annunce:
     runs-on: ubuntu-18.04
     outputs:
-      matrix: ${{ steps.traslate-object-2-array.outputs.matrix }}
+      matrix.titles: ${{toJson(fromJson(${{steps.read-announce-data.outputs.response}}).posts[].title)}}
+      matrix.urls: ${{toJson(fromJson(${{steps.read-announce-data.outputs.response}}).posts[].title)}}
+
     steps:
       - name: Read from GLV site the annunces posts and article
         uses: fjogeleit/http-request-action@master
@@ -19,14 +21,13 @@ jobs:
         with:
             url: '${{ secrets.GLV_SITE_ANNOUNCE_DATA }}'
             method: 'GET'
-      - name: Traslate annunce objects into attributes array
-        id: traslate-object-2-array
-        run: echo "::set-output name=matrix.title::'${{ steps.read-announce-data.outputs.response }}'|jq -c '.posts[].title'" ; echo "::set-output name=matrix.url::'${{ steps.read-announce-data.outputs.response }}'|jq -c '.posts[].url'
 
   publish-matrix:
     needs: prepare-annunce
     runs-on: ubuntu-18.04
     strategy:
-      matrix: ${{ needs.prepare-annunce.outputs.matrix }}
+      matrix:
+        titles: ${{ needs.prepare-annunce.outputs.matrix.titles }}
+        urls: ${{ needs.prepare-annunce.outputs.matrix.urls }}
     steps:
     - run: echo "${{ needs.prepare-annunce.outputs.matrix }}"
