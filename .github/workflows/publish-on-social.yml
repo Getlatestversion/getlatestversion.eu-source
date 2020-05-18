@@ -8,24 +8,23 @@ on:
 #    - cron: '0 4 * * *'
 
 jobs:
-  deploy:
+  prepare-annunce:
     runs-on: ubuntu-18.04
+    outputs:
+      matrix: ${{ steps.set-annunce.outputs.matrix }}
     steps:
-    - uses: fjogeleit/http-request-action@master
-      id: announce_data
-      with:
-          url: '${{ secrets.GLV_SITE_ANNOUNCE_DATA }}'
-          method: 'GET'
-    - name: Convert to JSON object
-      uses: gr2m/get-json-paths-action@v1.x
-      id: json-convert        
-      with:
-        json: ${{ steps.announce_data.outputs.response }}
-        publish-info: "publish-info.cut-over-date"
-        posts: "posts"
-    - name: Print Output
-      run: |
-          echo "${{ steps.json-convert.outputs.publish-info }}";
-          echo "${{ steps.json-convert.outputs.posts }}"
-          
-
+      - name: Read from GLV site the annunces posts and article
+        uses: fjogeleit/http-request-action@master
+        id: read-announce_data
+        with:
+            url: '${{ secrets.GLV_SITE_ANNOUNCE_DATA }}'
+            method: 'GET'
+      - name: set output matrix with posts array
+        id: set-annunce-matrix
+        run: "::set-output name=matrix::echo '${{ steps.announce_data.outputs.response }}' | jq -c '.posts'"
+  publish-matrix:
+    needs: prepare-annunce
+    runs-on: ubuntu-18.04
+    strategy:
+      matrix: ${{ fromJson(needs.prepare-annunce.outputs.matrix) }}
+    - run: echo "toJson(${{ matrix }})"
