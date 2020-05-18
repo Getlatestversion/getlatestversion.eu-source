@@ -11,7 +11,7 @@ tags:
 - team
 - team management
 summary: 'Reducing such a gap is possible using a combination of DevOps culture and the right tools. We will see how my organization tries to do so using Azure DevOps.'
-publishDate: 2020-05-20T03:00:00+02:00
+publishDate: 2020-05-27T03:00:00+02:00
 ---
 
 # Intro
