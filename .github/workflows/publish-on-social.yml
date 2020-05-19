@@ -21,7 +21,7 @@ jobs:
             url: '${{ secrets.GLV_SITE_ANNOUNCE_DATA }}'
             method: 'GET'
 
-      - run: echo ${{ toJson(fromJson(steps.read-announce-data.outputs.response).posts.*.title) }}
+      - run: echo "${{ toJson(fromJson(steps.read-announce-data.outputs.response).posts.*.title) }}"
 
 
   publish-matrix:
