@@ -21,11 +21,12 @@ jobs:
             url: '${{ secrets.GLV_SITE_ANNOUNCE_DATA }}'
             method: 'GET'
 
+      - run: echo ${{ fromJson(steps.read-announce-data.outputs.response.posts) }}
+
   publish-matrix:
     needs: prepare-annunce
     runs-on: ubuntu-18.04
-    strategy:
-      matrix: ${{ fromJson(needs.prepare-annunce.outputs.matrix) }}
+
     steps:
     - run: echo "${{ needs.prepare-annunce.outputs.titles }}"
     - run: echo "${{ needs.prepare-annunce.outputs.urls }}"
