@@ -24,16 +24,9 @@ jobs:
   publish-matrix:
     needs: prepare-annunce
     runs-on: ubuntu-18.04
-
+    env:
+      TITLES: ${{ toJson(fromJson(needs.prepare-annunce.outputs.matrix).*.title) }}
+      URLS: ${{ toJson(fromJson(needs.prepare-annunce.outputs.matrix).*.url) }}
     steps:
-    - name: Set array of titles
-      id: set-titles
-      run: echo "::set-output name=array::'${{ toJson(fromJson(needs.prepare-annunce.outputs.matrix).*.title) }}'"
-    - name: Set array of urls
-      id: set-urls
-      run: echo "::set-output name=array::'${{ toJson(fromJson(needs.prepare-annunce.outputs.matrix).*.url) }}'"
-    
-    strategy:
-      matrix: 
-        titles: ${{ steps.set-titles.array }}
-        urls: ${{ steps.set-urls.array }}
+    - run: echo ${{ TITLES }}
+    - run: echo ${{ URLS }}
