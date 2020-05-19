@@ -25,7 +25,7 @@ jobs:
         id: count-post
         run: |
             POSTnumber=$(echo '${{ toJson(fromJson(steps.read-announce-data.outputs.response).posts.*.title) }}' | jq -c 'length')
-            POSTnumber=$POSTnumber-1
+            POSTnumber=$(($POSTnumber - 1))
             POSTcounter=$(echo "[ $(seq -s ", " 0 $POSTnumber) ]")
             echo $POSTnumber
             echo "::set-output name=counter::$POSTcounter"
