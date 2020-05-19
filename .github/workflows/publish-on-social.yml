@@ -23,8 +23,8 @@ jobs:
       - name: Create the matrix object
         id: matrix-object
         env:
-          TITLES: ${{ toJson(fromJson(steps.prepare-annunce.outputs.response).posts.*.title) }}
-          URLS: ${{ toJson(fromJson(steps.prepare-annunce.outputs.response).posts.*.url) }}
+          TITLES: ${{ toJson(fromJson(steps.read-announce-data.outputs.response).posts.*.title) }}
+          URLS: ${{ toJson(fromJson(steps.read-announce-data.outputs.response).posts.*.url) }}
           TITLE_LABEL: "{\"titles\":"
           URL_LABEL: ",\"urls\":"
           CLOSE: "}"
