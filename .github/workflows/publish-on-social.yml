@@ -24,8 +24,8 @@ jobs:
           URLS: ${{ toJson(fromJson(steps.read-announce-data.outputs.response).posts.*.url) }}
           TITLE_LABEL: "{\"titles\":"
           URL_LABEL: ",\"urls\":"
-          MATRIX: $(echo"$TITLE_LABEL$TITLES$URL_LABEL$URLS\}")
-      - run: echo $MATRIX
+          
+      - run: echo "$TITLE_LABEL$TITLES$URL_LABEL$URLS\}"
 
 
   publish-matrix:
