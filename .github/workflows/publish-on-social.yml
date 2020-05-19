@@ -24,6 +24,7 @@ jobs:
       - name: Convert from annunce the values of attribute 'title' into array 
         id: annunce-title 
         run: echo "::set-output name=array::$(curl -s ${{ secrets.GLV_SITE_ANNOUNCE_DATA }} | jq -c '.posts | map(.title)')"
+      - run: echo ${{steps.annunce-title.array}}
       - name: Convert from annunce the values of attribute 'url' into array
         id: annunce-url
         env:
