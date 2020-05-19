@@ -20,8 +20,8 @@ jobs:
             url: '${{ secrets.GLV_SITE_ANNOUNCE_DATA }}'
             method: 'GET'
         env:
-          TITLES: ${{ toJson(fromJson(steps.read-announce-data.outputs.response).posts.*.title) }}
-          URLS: ${{ toJson(fromJson(steps.read-announce-data.outputs.response).posts.*.url) }}
+          TITLES: ${{ toJson(fromJson(response).posts.*.title) }}
+          URLS: ${{ toJson(fromJson(response).posts.*.url) }}
           TITLE_LABEL: "{\"titles\":"
           URL_LABEL: ",\"urls\":"
           
