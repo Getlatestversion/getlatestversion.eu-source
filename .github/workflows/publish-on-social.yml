@@ -29,5 +29,5 @@ jobs:
     runs-on: ubuntu-18.04
 
     steps:
-    - run: echo "${{ toJson(fromJson(needs.prepare-annunce.outputs.matrix).posts.*.title) }}"
+    - run: echo "${{ toJson(fromJson(needs.prepare-annunce.outputs.matrix).*.title) }}"
     - run: echo "${{ needs.prepare-annunce.outputs.urls }}"
