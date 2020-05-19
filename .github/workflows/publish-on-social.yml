@@ -17,8 +17,8 @@ jobs:
         env:
           TITLES: ${{ toJson(fromJson(steps.read-announce-data.outputs.response).posts.*.title) }}
           URLS: ${{ toJson(fromJson(steps.read-announce-data.outputs.response).posts.*.url) }}
-          TITLE_LABEL: ${{"{\"titles\":"}}
-          URL_LABEL: ${{",\"urls\":"}}
+          TITLE_LABEL: "{\"titles\":"
+          URL_LABEL: ",\"urls\":"
           MATRIX: ${{toJson(fromJson($(echo"$TITL_LABEL$TITLES$URL_LABEL$URLS\}")))}}
         uses: fjogeleit/http-request-action@master
         id: read-announce-data
