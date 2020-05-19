@@ -22,10 +22,8 @@ jobs:
             url: '${{ secrets.GLV_SITE_ANNOUNCE_DATA }}'
             method: 'GET'
       - name: Convert from annunce the values of attribute 'title' into array 
-        id: annunce-title
-        env:
-          LIST: $(curl '${{ secrets.GLV_SITE_ANNOUNCE_DATA }}' | jq -c '.posts | map(.title)')
-        run: echo $LIST
+        id: annunce-title 
+        run: echo $(curl ${{ secrets.GLV_SITE_ANNOUNCE_DATA }} | jq -c '.posts | map(.title)')
       - name: Convert from annunce the values of attribute 'url' into array
         id: annunce-url
         env:
