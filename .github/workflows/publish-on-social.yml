@@ -30,4 +30,4 @@ jobs:
 
     steps:
     - run: echo "${{ toJson(fromJson(needs.prepare-annunce.outputs.matrix).*.title) }}"
-    - run: echo "${{ toJson(fromJson(needs.prepare-annunce.outputs.matrix).*.url }}"
+    - run: echo "${{ toJson(fromJson(needs.prepare-annunce.outputs.matrix).*.url) }}"
