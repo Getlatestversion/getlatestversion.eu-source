@@ -28,5 +28,5 @@ jobs:
       TITLES: ${{ toJson(fromJson(needs.prepare-annunce.outputs.matrix).*.title) }}
       URLS: ${{ toJson(fromJson(needs.prepare-annunce.outputs.matrix).*.url) }}
     steps:
-    - run: echo ${{ TITLES }}
-    - run: echo ${{ URLS }}
+    - run: echo $TITLES
+    - run: echo $URLS
