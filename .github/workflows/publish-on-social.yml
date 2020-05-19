@@ -11,7 +11,7 @@ jobs:
   prepare-annunce:
     runs-on: ubuntu-18.04
     outputs:
-      matrix: ${{ steps.matrix-object.outputs.matrix  }}
+      matrix: ${{ steps.matrix-object.env.MATRIX  }}
     steps:
       - name: Read from GLV site the annunces posts and article
         uses: fjogeleit/http-request-action@master
@@ -28,7 +28,8 @@ jobs:
           TITLE_LABEL: "{\"titles\":"
           URL_LABEL: ",\"urls\":"
           CLOSE: "}"
-        run: echo "::set-output name=matrix::'$TITLE_LABEL$TITLES$URL_LABEL$URLS$CLOSE'"
+          MATRIX: $(echo "$TITLE_LABEL$TITLES$URL_LABEL$URLS$CLOSE")
+        run: echo "$MATRIX"
 
 
   publish-matrix:
