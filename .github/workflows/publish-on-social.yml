@@ -14,18 +14,19 @@ jobs:
       matrix: ${{ env.prepare-annunce.MATRIX }}
     steps:
       - name: Read from GLV site the annunces posts and article
+        env:
+          TITLES: ${{ toJson(fromJson(steps.read-announce-data.outputs.response).posts.*.title) }}
+          URLS: ${{ toJson(fromJson(steps.read-announce-data.outputs.response).posts.*.url) }}
+          TITLE_LABEL: ${{"{\"titles\":"}}
+          URL_LABEL: ${{",\"urls\":"}}
+          MATRIX: ${{toJson(fromJson($(echo"$TITL_LABEL$TITLES$URL_LABEL$URLS\}")))}}
         uses: fjogeleit/http-request-action@master
         id: read-announce-data
         with:
             url: '${{ secrets.GLV_SITE_ANNOUNCE_DATA }}'
             method: 'GET'
       - run: echo $MATRIX
-    env:
-      TITLES: ${{ toJson(fromJson(jobs.prepare-annunce.steps.read-announce-data.outputs.response).posts.*.title) }}
-      URLS: ${{ toJson(fromJson(jobs.prepare-annunce.steps.read-announce-data.outputs.response).posts.*.url) }}
-      TITLE_LABEL: ${{"{\"titles\":"}}
-      URL_LABEL: ${{",\"urls\":"}}
-      MATRIX: ${{toJson(fromJson($(echo"$TITL_LABEL$TITLES$URL_LABEL$URLS\}")))}}
+
 
   publish-matrix:
     needs: prepare-annunce
