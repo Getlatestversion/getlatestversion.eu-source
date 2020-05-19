@@ -20,6 +20,15 @@ jobs:
         with:
             url: '${{ secrets.GLV_SITE_ANNOUNCE_DATA }}'
             method: 'GET'
+      - name: Count how posts are annunced 
+        id: count-post
+        env:
+          post-number: $(echo ${{ toJson(fromJson(steps.read-announce-data.outputs.response).posts.*.title) }} | jq -c 'length')
+          post-counter: $(echo "[ $(seq -s ", " $post-number) ]")
+        run: |
+            echo $post-number
+            echo $post-counter
+
 
   publish-matrix:
     needs: prepare-annunce
