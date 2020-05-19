@@ -23,10 +23,14 @@ jobs:
             method: 'GET'
       - name: Convert from annunce the values of attribute 'title' into array 
         id: annunce-title
-        run: echo "::set-output name=array::$(echo '${{ steps.read-announce-data.outputs.response }}' | jq -c '.posts | map(.title)')"
+        env:
+          LIST: $(echo \"${{ steps.read-announce-data.outputs.response }}\" | jq -c \".posts | map(.title)\")
+        run: echo "::set-output name=array::'$LIST'"
       - name: Convert from annunce the values of attribute 'url' into array
         id: annunce-url
-        run: echo "::set-output name=array::$(echo '${{ steps.read-announce-data.outputs.response }}' | jq -c '.posts | map(.url)')"
+        env:
+          LIST: $(echo \"${{ steps.read-announce-data.outputs.response }}\" | jq -c \".posts | map(.url)\")
+        run: echo "::set-output name=array::'$LIST'"
 
   publish-matrix:
     needs: prepare-annunce
