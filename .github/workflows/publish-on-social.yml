@@ -26,8 +26,8 @@ jobs:
           POSTnumber: $(echo ${{ toJson(fromJson(steps.read-announce-data.outputs.response).posts.*.title) }} | jq -c 'length')
           POSTcounter: $(echo "[ $(seq -s ", " $POSTnumber) ]")
         run: |
-            echo $POSTnumber
-            echo $POSTcounter
+            POSTnumber=$(echo ${{ toJson(fromJson(steps.read-announce-data.outputs.response).posts.*.title) }} | jq -c 'length')
+            POSTcounter=$(echo "[ $(seq -s ", " $POSTnumber) ]")
 
 
   publish-matrix:
