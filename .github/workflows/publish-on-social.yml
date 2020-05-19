@@ -11,8 +11,8 @@ jobs:
   prepare-annunce:
     runs-on: ubuntu-18.04
     outputs:
-      titles: ${{ steps.read-announce-data.outputs.response.*.title }}
-      urls: ${{ steps.read-announce-data.outputs.response.*.url }}
+      titles: ${{ fromJson(steps.read-announce-data.outputs.response.*.title) }}
+      urls: ${{ fromJson(steps.read-announce-data.outputs.response.*.url) }}
 
     steps:
       - name: Read from GLV site the annunces posts and article
@@ -21,8 +21,8 @@ jobs:
         with:
             url: '${{ secrets.GLV_SITE_ANNOUNCE_DATA }}'
             method: 'GET'
-      - run: echo ${{ steps.read-announce-data.outputs.response.*.title }}
-      - run: echo ${{ steps.read-announce-data.outputs.response.*.url }}
+      - run: echo ${{ fromJson(steps.read-announce-data.outputs.response.*.title) }}
+      - run: echo ${{ fromJson(steps.read-announce-data.outputs.response.*.url) }}
   publish-matrix:
     needs: prepare-annunce
     runs-on: ubuntu-18.04
