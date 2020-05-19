@@ -11,7 +11,8 @@ jobs:
   prepare-annunce:
     runs-on: ubuntu-18.04
     outputs:
-      matrix: ${{ toJson(fromJson(steps.read-announce-data.outputs.response).posts.*) }}
+      matrix: ${{ toJson(fromJson(join()) }}
+
 
     steps:
       - name: Read from GLV site the annunces posts and article
@@ -20,17 +21,21 @@ jobs:
         with:
             url: '${{ secrets.GLV_SITE_ANNOUNCE_DATA }}'
             method: 'GET'
+      - name: Make matrix structure
+        id: make-matrix-to-send
+        env:
+          TITLES: ${{ toJson(fromJson(steps.read-announce-data.outputs.response).posts.*.title) }}
+          URLS: ${{ toJson(fromJson(steps.read-announce-data.outputs.response).posts.*.url) }}
+          TITLE_LABEL: ${{"{\"titles\":"}}
+          URL_LABEL: ${{",\"urls\":"}}
+          MATRIX: ${{toJson(fromJson($(echo"$TITL_LABEL$TITLES$URL_LABEL$URLS\}")))}}
 
   publish-matrix:
     needs: prepare-annunce
     runs-on: ubuntu-18.04
-    env:
-      TITLES: ${{ toJson(fromJson(needs.prepare-annunce.outputs.matrix).*.title) }}
-      URLS: ${{ toJson(fromJson(needs.prepare-annunce.outputs.matrix).*.url) }}
+
     strategy:
-      matrix: 
-        titles: ${{env.publish-matrix.TITLES}}
-        urls: ${{env.publish-matrix.URLS}}
+      matrix: ${{fromJson(needs.prepare-annunce.outputs.matrix)}}
     steps:
     - run: echo $TITLES
     - run: echo $URLS
