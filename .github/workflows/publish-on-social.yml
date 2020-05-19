@@ -11,8 +11,8 @@ jobs:
   prepare-annunce:
     runs-on: ubuntu-18.04
     outputs:
-      titles: ${{ steps.annunce-title.array }}
-      urls: ${{ steps.annunce-url.array }}
+      titles: ${{ steps.read-announce-data.outputs.response.*.title }}
+      urls: ${{ steps.read-announce-data.outputs.response.*.url }}
 
     steps:
       - name: Read from GLV site the annunces posts and article
@@ -21,15 +21,6 @@ jobs:
         with:
             url: '${{ secrets.GLV_SITE_ANNOUNCE_DATA }}'
             method: 'GET'
-      - name: Convert from annunce the values of attribute 'title' into array 
-        id: annunce-title 
-        run: echo "::set-output name=array::$(curl -s ${{ secrets.GLV_SITE_ANNOUNCE_DATA }} | jq -c '.posts | map(.title)')"
-      - run: echo ${{steps.annunce-title.array}}
-      - name: Convert from annunce the values of attribute 'url' into array
-        id: annunce-url
-        env:
-          LIST: $(echo \"${{ steps.read-announce-data.outputs.response }}\" | jq -c \".posts | map(.url)\")
-        run: echo "::set-output name=array::'$LIST'"
 
   publish-matrix:
     needs: prepare-annunce
