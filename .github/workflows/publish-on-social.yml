@@ -26,8 +26,8 @@ jobs:
     runs-on: ubuntu-18.04
     strategy:
       matrix: 
-        titles: ${{ toJson(fromJson(needs.prepare-annunce.outputs.matrix).*.title) }}
-        urls: ${{ toJson(fromJson(needs.prepare-annunce.outputs.matrix).*.url) }}
+        titles: ${{ fromJson(needs.prepare-annunce.outputs.matrix).*.title }}
+        urls: ${{ fromJson(needs.prepare-annunce.outputs.matrix).*.url }}
     steps:
     - run: echo "${{ toJson(fromJson(needs.prepare-annunce.outputs.matrix).*.title) }}"
     - run: echo "${{ toJson(fromJson(needs.prepare-annunce.outputs.matrix).*.url) }}"
