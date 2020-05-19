@@ -27,6 +27,10 @@ jobs:
     env:
       TITLES: ${{ toJson(fromJson(needs.prepare-annunce.outputs.matrix).*.title) }}
       URLS: ${{ toJson(fromJson(needs.prepare-annunce.outputs.matrix).*.url) }}
+    strategy:
+      matrix: 
+        titles: $TITLES
+        urls: $URLS
     steps:
     - run: echo $TITLES
     - run: echo $URLS
