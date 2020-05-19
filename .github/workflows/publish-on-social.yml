@@ -24,10 +24,7 @@ jobs:
   publish-matrix:
     needs: prepare-annunce
     runs-on: ubuntu-18.04
-    strategy:
-      matrix: 
-        titles: ${{ steps.set-titles.array }}
-        urls: ${{ steps.set-urls.array }}
+
     steps:
     - name: Set array of titles
       id: set-titles
@@ -35,3 +32,8 @@ jobs:
     - name: Set array of urls
       id: set-urls
       run: echo "::set-output name=array::'${{ toJson(fromJson(needs.prepare-annunce.outputs.matrix).*.url) }}'"
+    
+    strategy:
+      matrix: 
+        titles: ${{ steps.set-titles.array }}
+        urls: ${{ steps.set-urls.array }}
