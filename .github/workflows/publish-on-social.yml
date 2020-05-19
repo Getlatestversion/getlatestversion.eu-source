@@ -11,7 +11,7 @@ jobs:
   prepare-annunce:
     runs-on: ubuntu-18.04
     outputs:
-      matrix: ${{ toJson(fromJson(join()) }}
+      matrix: ${{ env.prepare-annunce.MATRIX }}
     env:
       TITLES: ${{ toJson(fromJson(steps.read-announce-data.outputs.response).posts.*.title) }}
       URLS: ${{ toJson(fromJson(steps.read-announce-data.outputs.response).posts.*.url) }}
