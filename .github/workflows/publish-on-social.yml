@@ -11,7 +11,7 @@ jobs:
   prepare-annunce:
     runs-on: ubuntu-18.04
     outputs:
-      matrix: ${{ toJson(fromJson(steps.read-announce-data.outputs.response).posts) }}
+      matrix: ${{ toJson(fromJson(steps.read-announce-data.outputs.response).posts.*) }}
 
     steps:
       - name: Read from GLV site the annunces posts and article
@@ -29,5 +29,5 @@ jobs:
     runs-on: ubuntu-18.04
 
     steps:
-    - run: echo "${{ toJson(fromJson(needs.prepare-annunce.outputs.matrix).*.title) }}"
+    - run: echo "${{ toJson(fromJson(needs.prepare-annunce.outputs.matrix)) }}"
     - run: echo "${{ needs.prepare-annunce.outputs.urls }}"
