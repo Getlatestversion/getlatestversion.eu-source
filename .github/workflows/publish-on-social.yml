@@ -13,6 +13,7 @@ jobs:
     outputs:
       titles: ${{ toJson(fromJson(steps.read-announce-data.outputs.response).posts.*.title) }}
       urls: ${{ toJson(fromJson(steps.read-announce-data.outputs.response).posts.*.url) }}
+      counter: ${{ steps.count-post.env.POSTCOUNTER }}
     steps:
       - name: Read from GLV site the annunces posts and article
         uses: fjogeleit/http-request-action@master
@@ -27,6 +28,8 @@ jobs:
             POSTcounter=$(echo "[ $(seq -s ", " $POSTnumber) ]")
             echo $POSTnumber
             echo $POSTcounter
+        env:
+          POSTCOUNTER: $POSTcounter
 
 
   publish-matrix:
@@ -35,9 +38,9 @@ jobs:
 
     strategy:
       matrix: 
-        titles: ${{fromJson(needs.prepare-annunce.outputs.titles)}}
-        urls: ${{fromJson(needs.prepare-annunce.outputs.urls)}}
+        counter: ${{fromJson(needs.prepare-annunce.outputs.counter)}}
+
     steps:
     - run: |
-          echo ${{matrix.titles}}
-          echo ${{matrix.urls}}
+          echo ${{fromJson(needs.prepare-annunce.outputs.titles)[matrix.counter]}}
+          echo ${{fromJson(needs.prepare-annunce.outputs.urls)[matrix.counter]}}
