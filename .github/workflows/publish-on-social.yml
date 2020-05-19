@@ -11,7 +11,8 @@ jobs:
   prepare-annunce:
     runs-on: ubuntu-18.04
     outputs:
-      matrix: ${{ steps.matrix-object.outputs.matrix  }}
+      titles: ${{ toJson(fromJson(steps.read-announce-data.outputs.response).posts.*.title) }}
+      urls: ${{ toJson(fromJson(steps.read-announce-data.outputs.response).posts.*.url) }}
     steps:
       - name: Read from GLV site the annunces posts and article
         uses: fjogeleit/http-request-action@master
@@ -20,16 +21,6 @@ jobs:
             url: '${{ secrets.GLV_SITE_ANNOUNCE_DATA }}'
             method: 'GET'
 
-      - name: Create the matrix object
-        id: matrix-object
-        env:
-          TITLES: ${{ toJson(fromJson(steps.read-announce-data.outputs.response).posts.*.title) }}
-          URLS: ${{ toJson(fromJson(steps.read-announce-data.outputs.response).posts.*.url) }}
-          TITLE_LABEL: "{\"titles\":"
-          URL_LABEL: ",\"urls\":"
-          CLOSE: "}"
-        run: matrix=$(echo "$TITLE_LABEL$TITLES$URL_LABEL$URLS$CLOSE")
-      - run: echo $${{steps.matrix-object.outputs.matrix}}
 
 
   publish-matrix:
@@ -37,7 +28,9 @@ jobs:
     runs-on: ubuntu-18.04
 
     strategy:
-      matrix: ${{fromJson(needs.prepare-annunce.outputs.matrix)}}
+      matrix: 
+        titles: ${{fromJson(needs.prepare-annunce.outputs.titles)}}
+        urls: ${{fromJson(needs.prepare-annunce.outputs.urls)}}
     steps:
-    - run: echo $TITLES
-    - run: echo $URLS
+    - run: echo ${{matrix.titles}}
+    - run: echo ${{matrix.urls}}
