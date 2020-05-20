@@ -12,7 +12,7 @@ tags:
 - docker
 - container
 - sql clone
-summary: 'Sessione per l'evento HomeGen di CloudGen su Cloning e Container con SQL Server/Docker. Collaborazione tra le nostre community.'
+summary: 'Sessione per l''evento HomeGen di CloudGen su Cloning e Container con SQL Server/Docker. Collaborazione tra le nostre community.'
 publishDate: 2020-05-20T03:00:00+02:00
 ---
 
