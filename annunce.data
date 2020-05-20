@@ -1,26 +1,36 @@
 {
   "publish-info": {
-    "cut-over-date": "2020-05-17 04:04:49.892153138 +0000 UTC"
+    "cut-over-date": "2020-05-07 15:54:29.6296788 +0100 BST"
   },
-  "posts": 
-    [{
-        "title": "Organizzazione account in Azure DevOps: Security dei WorkItem",
-        "url": "http://www.getlatestversion.eu/it/2020/05/organizzazione-account-in-azure-devops-security-dei-workitem/"
-    },
+  "posts": [
     {
-        "title": "Gestire progetti utilizzando le Wiki di Azure DevOps",
-        "url": "http://www.getlatestversion.eu/it/2020/05/gestire-progetti-utilizzando-le-wiki-di-azure-devops/"
-    },
-    {
-        "title": "Organizzazione account in Azure DevOps",
-        "url": "http://www.getlatestversion.eu/it/2020/04/organizzazione-account-in-azure-devops/"
-    },
-    {
-        "title": "Organizzazione account in Azure DevOps: Security",
-        "url": "http://www.getlatestversion.eu/it/2020/04/organizzazione-account-in-azure-devops-security/"
-    },
-    {
-        "title": "Evidenziare gli impedimenti in una kanban board su Azure DevOps",
-        "url": "http://www.getlatestversion.eu/it/2020/04/evidenziare-gli-impedimenti-in-una-kanban-board-su-azure-devops/"
+      "lang": "it",
+      "title": "Organizzazione account in Azure DevOps: Security dei WorkItem",
+      "link": "https://stagegetlatestversioneu.z6.web.core.windows.net/it/2020/05/organizzazione-account-in-azure-devops-security-dei-workitem/",
+      "date": "2020-05-11 00:00:38 +0100 BST",
+      "summary": "Utilizzare la security delle Aree per gestire la protezione dei Work Item dei differenti teamsd.",
+      "authors": [
+        {
+          "nick": "alkampfer",
+          "name": "Gian Maria Ricci",
+          "social": {
+            "twitter": {
+              "name": "@alkampfer",
+              "url": "https://twitter.com/alkampfer"
+            },
+            "github": {
+              "name": "alkampfergit",
+              "url": "https://github.com/alkampfergit"
+            },
+            "web-site": {
+              "name": "http://www.codewrecks.com/",
+              "url": "http://www.codewrecks.com/"
+            },
+            "linkedin": {
+              "name": "https://www.linkedin.com/in/gianmariaricci",
+              "url": "https://www.linkedin.com/in/gianmariaricci"
+            }
+          }
+        }]
     }]
 }
