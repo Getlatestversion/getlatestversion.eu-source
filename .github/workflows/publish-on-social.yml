@@ -47,4 +47,4 @@ jobs:
           echo ${{fromJson(needs.prepare-annunce.outputs.links)[matrix.counter]}}
           echo ${{fromJson(needs.prepare-annunce.outputs.dates)[matrix.counter]}}
           echo ${{fromJson(needs.prepare-annunce.outputs.summaries)[matrix.counter]}}
-          echo ${{toJson(fromJson(needs.prepare-annunce.outputs.authors)[matrix.counter].*)}}
+          echo ${{fromJson(needs.prepare-annunce.outputs.authors)[matrix.counter].*.nick}
