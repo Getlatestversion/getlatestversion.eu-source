@@ -40,11 +40,21 @@ jobs:
       matrix: 
         counter: ${{fromJson(needs.prepare-annunce.outputs.counter)}}
 
+    env:
+      AUTHORS: ${{fromJson('{[]}')}}
+
     steps:
-    - run: |
+    - name: Verify Step
+      run: |
           echo ${{fromJson(needs.prepare-annunce.outputs.langs)[matrix.counter]}}
           echo ${{fromJson(needs.prepare-annunce.outputs.titles)[matrix.counter]}}
           echo ${{fromJson(needs.prepare-annunce.outputs.links)[matrix.counter]}}
           echo ${{fromJson(needs.prepare-annunce.outputs.dates)[matrix.counter]}}
           echo ${{fromJson(needs.prepare-annunce.outputs.summaries)[matrix.counter]}}
           echo '${{toJson(fromJson(needs.prepare-annunce.outputs.authors)[matrix.counter])}}'
+          echo "::set-output name=AUTHORS::${{fromJson(needs.prepare-annunce.outputs.authors)[matrix.counter]}}"
+
+    - name: Create linked social linked
+      run: |
+          echo "::set-output name=NICK::${{toJson(AUTHORS.*.nick)}}"
+          
