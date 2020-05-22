@@ -29,15 +29,15 @@ Binary composition occurs when one or more solutions reference the compiled bina
 
 If you are forced to commit the code together with the binaries produced by build in the repository...Keep on reading :)
 
-## How can we distribute binaries? 
+# How can we distribute binaries? 
 
 We can make those binaries available in several ways.
 
-### Git repository
+## Git repository
 A first possibility consists in committing them into a repository anytime a merge into the development/master branch by means of the Continuous Integration build pipeline is requested by a Pull Request. Of course, this increases the size of the repository introducing significant slowdown checkout times and performances. Imagine what could happen if teams work on different branches ending up using different versions of the same binaries creating merge conflicts.
 
-### File share
+## File share
 Another option consists in putting the binaries onto a file share. In this case, however, there is no index to find binaries quickly and there is no protection against overriding a version.
 
-### Package Management with Azure Artifacts
+## Package Management with Azure Artifacts
 This should definitely be the most suitable solution because it allows putting binaries into NuGet (and other as npm, Maven, Python, and universal) packages making it possible for Solution A to reference these packages. Among the several advantages introduced by this methodology, in Continuous Integration Azure pipeline a NuGet published task can be added in order to make the update versioning procedure automatic and distributing it in a reliable way also.
