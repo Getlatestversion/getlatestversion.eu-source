@@ -4,6 +4,9 @@ on:
   push:
     branches:
       - master
+  pull_request:
+    branches:
+      - '*'
   schedule:
     - cron: '0 4 * * *'
 
@@ -31,3 +34,4 @@ jobs:
           external_repository: Getlatestversion/getlatestversion.github.io
           publish_branch: master
           publish_dir: ./public
+        if: ${{ github.event_name != 'pull_request' }}
