@@ -2,14 +2,15 @@
 <main class="main layout__main">
 <article class="{{ with .Section }}section-{{ . | urlize }} {{ end }}single-view">
 <header>
-<h1 class="title"><a name="_top">{{ .Title }}</a></h1>
+<h1 class="title"><a name="_top">{{ i18n "authors" }}</a></h1>
 </header>
 <div class="content">
 
+{{/* author(s) in alphabetical order */}}
 {{ range .Data.Terms.Alphabetical }}
 {{ $term := . }}
     {{ with index $.Site.Data.authors $term.Name }}
-    <a href="{{ $term.Name }}">{{ .DisplayName }}</a> ({{ $term.Count }} post)<br/>
+    <a href="{{ $term.Name }}">{{ .DisplayName }}</a> (<a href="{{ $term.Name }}/authorposts.htm">{{ $term.Count }} post</a>)<br/>
     {{ end }}
 {{ end }}
 

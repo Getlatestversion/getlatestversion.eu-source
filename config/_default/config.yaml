@@ -128,5 +128,21 @@ outputFormats:
 
 # outputs:
 #   home: ["HTML","RSS", "JSON", "SearchIndex"]
+
+mediaTypes:
+  text/html+custom:
+    suffixes:
+    - htm
+
 outputs:
-  home: ["HTML","RSS","JSON","ANNOUNCE"]
+  home: ["HTML","RSS", "JSON","ANNOUNCE"]
+  taxonomy: ["HTML","RSS","AUTHORPOSTS"]
+
+outputFormats:
+  authorposts:
+    mediaType: "text/html+custom"
+    baseName: "authorposts"
+    isPlainText: false
+    isHTML: true
+    notAlternative: true
+    permalinkable: true

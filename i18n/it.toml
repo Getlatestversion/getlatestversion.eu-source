@@ -22,6 +22,12 @@ other = "Aggiornato al:"
 [created]
 other = "Creato il:"
 
+[authors]
+other = "Autori"
+
+[author_all_posts]
+other = "Tutti i post"
+
 [back_to_top]
 other = "Torna su"
 
