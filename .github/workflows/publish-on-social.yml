@@ -41,7 +41,7 @@ jobs:
         counter: ${{fromJson(needs.prepare-annunce.outputs.counter)}}
 
     env:
-      AUTHORS: ${{needs.prepare-annunce.outputs.authors[matrix.counter]}}
+      AUTHORS: ${{fromJson(needs.prepare-annunce.outputs.authors)[matrix.counter]}}
 
     steps:
     - name: Verify Step
@@ -52,10 +52,10 @@ jobs:
           echo ${{fromJson(needs.prepare-annunce.outputs.dates)[matrix.counter]}}
           echo ${{fromJson(needs.prepare-annunce.outputs.summaries)[matrix.counter]}}
           echo '${{toJson(fromJson(needs.prepare-annunce.outputs.authors)[matrix.counter])}}'
-          echo "::set-output name=AUTHORS::${{needs.prepare-annunce.outputs.authors)[matrix.counter]}}"
+          echo "::set-output name=AUTHORS::${{fromJson(needs.prepare-annunce.outputs.authors)[matrix.counter]}}"
 
     - name: Create linked social linked
       run: |
-          echo "::set-output name=NICK::${{fromJson(env.AUTHORS).*.nick}}"
+          echo "::set-output name=NICK::${{env.AUTHORS.*.nick}}"
           echo $NICK
           
