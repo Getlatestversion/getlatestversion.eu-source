@@ -36,7 +36,7 @@ Ci sono diversi modi in cui possiamo rendere disponibili i file binari.
 Una delle possibilità è fare commit dei file binari nel repository ogni qualvolta che lo sviluppatore richiede di fare merge con le sue modifiche nel ramo development/master - attraverso una Pull Request. Il tutto può essere realizzato mediante un processo automatico che si traduce in una pipeline di Continuous Integration. Naturalmente, questo comporterebbe l'aumento delle dimensioni del repository, introducendo tempi significativi di checkout e di prestazioni.
 Immaginiamo cosa potrebbe accadere se i team lavorassero su rami diversi ritrovandosi ad utilizzare differenti versioni degli stessi file binari: si creerebbero sicuramente conflitti durante la fase di merge.
 
-## File binari condivisi
+## Condivisione in cartella di rete
 
 Un'altra opzione consiste nel caricare i file binari in una cartella di rete condivisa. Adottando questa soluzione non sarà però disponibile l'indicizzazione per facilitare la ricerca rapida dei file binari e inoltre non esisterà alcuna protezione contro l'override di una specifica versione.
 
