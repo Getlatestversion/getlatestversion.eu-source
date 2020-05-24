@@ -56,6 +56,6 @@ jobs:
 
     - name: Create linked social linked
       run: |
-          echo "::set-output name=NICK::${{env.AUTHORS.*.nick}}"
+          echo "::set-output name=NICK::${{toJson(env.AUTHORS.*.nick)}}"
           echo $NICK
           
