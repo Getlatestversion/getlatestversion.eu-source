@@ -41,7 +41,7 @@ jobs:
         counter: ${{fromJson(needs.prepare-annunce.outputs.counter)}}
 
     env:
-      AUTHORS: ${{fromJson(needs.prepare-annunce.outputs.authors)[matrix.counter]}}
+      AUTHORS: ${{needs.prepare-annunce.outputs.authors[matrix.counter]}}
 
     steps:
     - name: Verify Step
