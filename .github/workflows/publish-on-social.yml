@@ -56,8 +56,8 @@ jobs:
           echo "::set-output name=NICK::${{toJson(fromJson(needs.prepare-annunce.outputs.authors)[matrix.counter].*.nick)}}"
           echo $NICK
 
-    - name: Send Tweet with for annunced post/article
-      id: send-tweet
+    - name: Send Tweet with for annunced post or article
+      id: annunced-post-tweeted
       uses: ethomson/send-tweet-action@v1
         with:
           status: "Hi, this is a test! by @giulianolatini"
