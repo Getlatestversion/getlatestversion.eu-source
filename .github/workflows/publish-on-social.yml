@@ -62,7 +62,7 @@ jobs:
       id: annunced-post-tweeted
       uses: ethomson/send-tweet-action@v1
       with:
-        status: ${{steps.make-message.ShortMessage}}
+        status: '${{steps.make-message.ShortMessage}}'
         consumer-key: ${{ secrets.TWITTER_CONSUMER_API_KEY }}
         consumer-secret: ${{ secrets.TWITTER_CONSUMER_API_SECRET }}
         access-token: ${{ secrets.TWITTER_ACCESS_TOKEN }}
