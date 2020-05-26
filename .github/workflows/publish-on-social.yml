@@ -55,6 +55,8 @@ jobs:
       run: |
           echo "::set-output name=NICK::${{toJson(fromJson(needs.prepare-annunce.outputs.authors)[matrix.counter].*.nick)}}"
           echo $NICK
+          echo "msgString=$(echo '<a href=\"${{fromJson(needs.prepare-annunce.outputs.titles)[matrix.counter]}})\">${{fromJson(needs.prepare-annunce.outputs.titles)[matrix.counter]}}</a> by ${{toJson(fromJson(needs.prepare-annunce.outputs.authors)[matrix.counter].*.social.twitter.name)}}"
+          echo "::set-output name=ShortMessage::echo '$msgString'"
 
     - name: Send Tweet with for annunced post or article
       id: annunced-post-tweeted
