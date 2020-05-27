@@ -1,6 +1,7 @@
 ---
-title: "Organizzazione account in Azure DevOps: Security dei WorkItem"
+title: "Organizzazione account in Azure DevOps: Security dei Repository"
 date: 2020-05-25T00:00:38+01:00
+publishDate: 2020-05-25T00:00:38+01:00
 authors: ['alkampfer']
 categories: ["Devops pills"]
 tags: ["devops", "pill"]
@@ -15,6 +16,6 @@ Per chi se li fosse persi, ecco i link ai precedenti video di questa serie.
 
 - [Organizzazione account in azure devops](https://www.getlatestversion.eu/it/2020/04/organizzazione-account-in-azure-devops/)
 - [Organizzazione account in Azure DevOps: Security](https://www.getlatestversion.eu/it/2020/04/organizzazione-account-in-azure-devops-security/)
-- [Organizzazione account in Azure DevOps: Security dei Work itemsd](https://www.getlatestversion.eu/it/2020/05/organizzazione-account-in-azure-devops-security-dei-workitem/)
+- [Organizzazione account in Azure DevOps: Security dei Work Items](https://www.getlatestversion.eu/it/2020/05/organizzazione-account-in-azure-devops-security-dei-workitem/)
 
 Buona visione.
