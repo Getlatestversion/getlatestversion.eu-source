@@ -1,7 +1,7 @@
 ---
-draft: true
 title: "Flaky builds"
 date: 2020-06-07T20:00:00+01:00
+publishDate: 2020-06-10T00:00:01+01:00
 authors: 
 - giuliov
 categories:
@@ -220,5 +220,4 @@ A final word for the tool-chain. If you need to go back and rebuild years old ve
 [^2]: Raymond Chen's post [What is DLL import binding?](https://devblogs.microsoft.com/oldnewthing/20100318-00/?p=14563) and also [Why are the module timestamps in Windows 10 so nonsensical?](https://devblogs.microsoft.com/oldnewthing/20180103-00/?p=97705).  
 [^3]: MSBuild documentation [Customize your build](https://docs.microsoft.com/en-us/visualstudio/msbuild/customize-your-build).  
 [^4]: Program database (PDB) is Microsoft's file format for storing debugging information.  
-[^5]: Source [GitHub](https://octoverse.github.com/#dependencies-overview):
-> 203 package dependencies, on average, support every public and private repository with an enabled dependency graph  
+[^5]: Source [GitHub](https://octoverse.github.com/#dependencies-overview): "_203 package dependencies, on average, support every public and private repository with an enabled dependency graph_"  

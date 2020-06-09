@@ -18,7 +18,9 @@ Let's start with my list of top 10 CI/CD pipeline issues.
 
 ## The list
 
-**NOTE**: Published posts are in **bold**, the link for items in _italic_  does not work.
+> **NOTE**:  
+> Published posts are in **bold**, the link for items in _italic_  does not work.  
+> Last update: 10 June 2020
 
  1.	[_Sloppy handling of Secrets_](../sloppy-secrets-handling) -- leaking or hard-coding passwords, tokens or similar sensitive data;
  2.	[_Untraceable artifacts_](../untraceable-artifacts) -- when builds produce (or worse: deploy!) binaries of unknown source and version; this is a major red flag because it is cheap and easy to fix, but it is usually overlooked causing a major technical debt pile-up;
