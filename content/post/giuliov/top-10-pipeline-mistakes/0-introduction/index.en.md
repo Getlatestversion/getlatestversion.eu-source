@@ -29,6 +29,7 @@ Let's start with my list of top 10 CI/CD pipeline issues.
  5.	[_Bleeding edge_](../bleeding-edge) -- using the latest and greatest technology is not always a wise choice;
  6.	[_Galactic Builds_](../galactic-builds) -- far-reaching builds that slow teams down instead of helping them;
  7.	[**Flaky builds**](../flaky-builds) -- builds generating unreproducible behaviours or random artefacts;
+ 7.	[**Flaky builds**](../../06/flaky-builds) -- builds generating unreproducible behaviours or random artefacts;
  8.	[_Too much of a good thing_](../too-much-of-a-good-thing) -- when you go too far to avoid the above mistakes, causing the fix to backfire;
  9.	[_Implicit assumption_](../implicit-assumption) -- any build that breaks when some undocumented environmental condition change;
 10.	[_Untamed plugins_](../untamed-plugins) -- similar to the previous one, it is the nightmare of people that manage your build environments, when the build software uses too many, or even conflicting plugins.
