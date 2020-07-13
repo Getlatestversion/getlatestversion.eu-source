@@ -8,7 +8,7 @@ tags:
 - azure devops
 - git
 - cherry pick
-summary:  Fixing a bug on multiple branches is a complex task. In this article I will illustrate the Git cherry-pick command.'
+summary: 'Fixing a bug on multiple branches is a complex task. In this article I will illustrate the Git cherry-pick command.'
 publishDate: 2020-07-13T03:00:00+02:00
 ---
 
