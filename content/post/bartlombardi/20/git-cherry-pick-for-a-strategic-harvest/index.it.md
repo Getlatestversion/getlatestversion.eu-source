@@ -1,5 +1,5 @@
 ---
-title: "Git Cherry-Pick per una raccolto strategico"
+title: "Git Cherry-Pick per un raccolto strategico"
 date: 2020-07-13T03:00:00+02:00
 authors: ['bartlombardi']
 categories:
