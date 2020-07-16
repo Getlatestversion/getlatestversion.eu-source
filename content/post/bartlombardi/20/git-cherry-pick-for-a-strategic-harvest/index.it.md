@@ -7,8 +7,8 @@ categories:
 tags:
 - azure devops
 - git
-- cherry pick
-summary: 'Fissare un bug su più branch è un compito oneroso. In questo articolo illustrero' il comando Git cherry-pick.'
+- cherry-pick
+summary: "Fissare un bug su più branch è un compito oneroso. In questo articolo illustrero' il comando Git cherry-pick."
 publishDate: 2020-07-13T03:00:00+02:00
 ---
 
