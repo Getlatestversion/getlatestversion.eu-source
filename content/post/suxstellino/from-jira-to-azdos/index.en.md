@@ -62,7 +62,7 @@ First, download [the latest release of the CLI from GitHub](https://github.com/s
     - modify the file in the maps section: link-map, type-map, field-map, and so on. 
 1. get the credentials (as admin) and the Jira server URL
 1. make your command line, which should look like the following:
-   `jira-export -u username@domain.ext -p userPwd --url https://jiraurl.ext --config config-scrum.JSON --force`
+   `jira-export -u username@domain.ext -p userPwd --url https://jiraurl.ext --config config-scrum.json --force`
 1. run the command and look for the JSON files into the JiraExport folder
     - look for any warning/error like the following and correct them (this will help you to import without any breaking change)
    
@@ -76,7 +76,7 @@ It's time to execute the second command line, **wi-import**. As we can see, we h
 
 Coming back to the configuration, we should pay attention to `base-area-path` and `base-iteration-path`. With these, we can choose the target of our migration, in terms of area and iteration. This means that we can manage our items after the import has been completed. With a query, for example, we can remove everything and start over with the migration. Cool. The command should like the following:
 
-`wi-import --token PAT --url https://dev.azure.com/org --config config-scrum.JSON --force`
+`wi-import --token PAT --url https://dev.azure.com/org --config config-scrum.json --force`
 
 ![import](./03-import.png)
 
