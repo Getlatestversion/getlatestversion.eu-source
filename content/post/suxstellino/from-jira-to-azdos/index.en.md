@@ -21,11 +21,23 @@ This post is a quick step by step guide to migrate work items from [Jira cloud](
 
 ## Table of content
 
+- [Getting started](#Getting-started)
 - [The software selection](#The-software-selection)
 - [Executing the tool](#Executing-the-tool)
   - [How to export Jira issues](#How-to-export-Jira-issues)
   - [How to import to Azure DevOps](#How-to-import-to-Azure-DevOps)
 - [Conclusions](#Conclusions)
+
+## Getting started
+
+Before going in depth with technical details, I would like to share some tips. As we have already said, the migrations are complex tasks. Mandatory requirements should be a strong knowledge in terms of business and team management, enterprise awareness and years of experience on different real scenarios.
+
+We must avoid any decision if our ideas and targets are not clear. Indeed, snother important requirement is to understand in depth the workflows you will work on, both the legacy one and the new you're figuring out. Some of the question we should ask ourselves are:
+
+- Do we require these steps? And what about these work items?
+- Is this state workflow good for us? Should we change it? How?
+- Do we require to preserve relationships and items' history?
+- Can we keep something which is working very well now? If so, what tools we're thinking about?
 
 ## The software selection
 
