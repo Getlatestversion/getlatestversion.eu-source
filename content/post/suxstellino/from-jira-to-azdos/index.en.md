@@ -10,7 +10,7 @@ tags:
 - work items
 - migration
 summary: 'A step by step guide to migrate work items from Jira to Azure DevOps'
-publishDate: 2020-08-13T03:00:00+02:00
+publishDate: 2020-08-19T03:00:00+02:00
 ---
 
 # Intro
