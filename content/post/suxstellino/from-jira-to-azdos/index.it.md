@@ -24,7 +24,7 @@ Questa è una semplice guida di migrazione di work item da [Jira cloud](https://
 
 Trovate il video su youtube, sul canale di getlatestversion:
 
-{{< youtube id="iYxKZFQdBwM" >}}
+{{< youtube id="6k64xeqBMws" >}}
 
 Risorse:
 
