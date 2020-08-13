@@ -1,6 +1,6 @@
 ---
 title: "Migrating work items from Jira to Azure DevOps"
-date: 2020-08-10T17:30:00+02:00
+date: 2020-08-18T17:30:00+02:00
 authors: ['suxstellino']
 categories:
 - devops articles
