@@ -10,7 +10,7 @@ tags:
 - work items
 - migration
 summary: 'A step by step guide to migrate work items from Jira to Azure DevOps'
-publishDate: 2020-08-12T03:00:00+02:00
+publishDate: 2020-08-13T03:00:00+02:00
 ---
 
 # Intro
@@ -106,4 +106,4 @@ The Azure DevOps hierarchy of items (except for the Features, which I've not map
 
 In a couple of days, we've migrated everything related to work items from Jira to Azure DevOps. Most of the time should be invested in configuring the JSON mappings and, for sure, to check for the errors caught during exporting items. Finally, after importing into AzDOs, you can start over and over, removing all the items under the pre-configured area/iteration, until everything looks good.
 
-[Back to top](#Intro)
+[Back to top](#Intro) 
