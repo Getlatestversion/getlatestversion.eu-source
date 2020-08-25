@@ -9,7 +9,7 @@ tags:
 - git
 - cherry-pick
 summary: "Fissare un bug su più branch è un compito oneroso. In questo articolo illustrero' il comando Git cherry-pick."
-publishDate: 2020-07-13T03:00:00+02:00
+publishDate: 2020-08-28T03:00:00+02:00
 ---
 
 # Introduzione
