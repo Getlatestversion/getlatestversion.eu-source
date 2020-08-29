@@ -15,7 +15,7 @@ publishDate: 2020-08-19T03:00:00+02:00
 
 # Intro
 
-A migration, no matter what is the involved set of technologies, is one of the hardest tasks to deal with. Not just for IT. However, working with the culture of many companies, I've got confirmation that the tool should be considered at the end of the migration process. Indeed, after setting up the ceremonies, involving the patterns of the team working, switching the methodologies from legacy to lean/iterative, it comes finally to understand how to choose from the available tools  (part of the "enterprise awareness") and including a set of new tools, optionally. The goal is to get all the stuff which fit the real scenario.
+Migrations are hard tasks to deal with. Not just for IT. Working with the culture of many companies, I've got confirmation that the tool should be considered at the end of the migration process. After setting up the ceremonies and switching the methodologies from legacy to lean/iterative, it comes finally to choose from the available tools (_enterprise awareness_) and including new ones. The goal is to get all the stuff which fits the real scenario.
 
 This post is a quick step by step guide to migrate work items from [Jira cloud](https://www.atlassian.com/software/jira) to [Azure DevOps Services](https://azure.microsoft.com/it-it/services/devops/). I'm going to describe the last step of one of my customers' migration.
 
@@ -32,7 +32,7 @@ This post is a quick step by step guide to migrate work items from [Jira cloud](
 
 Before going in-depth with technical details, I would like to share some tips. As we have already said, the migrations are complex tasks. Mandatory requirements should be a strong knowledge in terms of business and team management, enterprise awareness and years of experience on different real scenarios.
 
-We must avoid any decision if our ideas and targets are not clear. Indeed, another important requirement is to understand in depth the workflows you will work on, both the legacy one and the new one you're figuring out. Some of the question we should ask ourselves are:
+We must avoid any decision if our ideas and targets are not clear. Another important requirement is to understand in depth the workflows you will work on, both the legacy one and the new one you're figuring out. Some of the question we should ask ourselves are:
 
 - Do we require these steps? And what about these work items?
 - Is this state workflow good for us? Should we change it? How?
@@ -51,13 +51,13 @@ When exporting from Jira, the CLI implemented by [Solidify](https://solidify.se/
 
 When importing to Azure DevOps, the CLI imports the output JSON files using the same mapping configured into the configuration file in the exporting phase.
 
-Why this tool? Because it has a couple of simple command lines and it consumes a JSON configuration which is clear. Additionally, it has many default behaviours, like the built-in configuration for _SCRUM_, _agile_ and _basic_ process templates, which allows us to forget about the complexity of both the source and target software.
+Why this tool? Because it has a couple of simple command lines and it consumes a JSON configuration which is clear. Additionally, it has many default behaviours, like the built-in configuration for _Scrum_, _agile_ and _basic_ process templates, which allows us to forget about the complexity of both the source and target software.
 
 [Back to top](#Intro)
 
 ## Executing the tool
 
-The scenario I've dealt with, Jira side, has been configured with many states, also with the same meaning (due to the legacy setup and different team's approach) and with custom workflows/links. On the other hand, Azure DevOps side, I've created a customized Scrum template, with just two new work item types, which should support some of the customized source behaviours, and a couple of new states. So the tool has been configured as depicted in the following JSON (just a subset of maps):
+The scenario (Jira) has been configured with many states, sometimes with overlapping meaning (due to the legacy setup and different team's approach) and with custom workflows/links. On the other hand, Azure DevOps side, I've created a customized Scrum template, with just two new work item types, which should support some of the customized source behaviours, and a couple of new states. So the tool has been configured as depicted in the following JSON (just a subset of maps):
 
 ![config](./01-config.png)
 
