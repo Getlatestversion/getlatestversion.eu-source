@@ -15,9 +15,15 @@ publishDate: 2020-09-02T03:00:00+02:00
 
 # L'evento
 
-Come membro di [getlatestversion.eu](https://getlatestversion.eu) vorrei condividere con voi un evento che sto organizzando insieme agli amici di [IVE](https://ive.ai) e di dotnetsicilia ([Gaetano Paternò](https://www.gaetanopaterno.it)). Vogliamo provare a sfruttare la potenzialità degli strumenti di streaming in nostro possesso per offirvi una giornata all'insegna delle esperienze di vita reale aziendale ai tempi del covid-19. 
+**Giorno:** 10 dicembre 2020
+
+**Hashtag:** #digitalwarriors2020
+
+Come membro di [getlatestversion.eu](https://getlatestversion.eu) vorrei condividere con voi un evento che sto organizzando insieme agli amici di [IVE](https://ive.ai) e di dotnetsicilia ([Gaetano Paternò](https://www.gaetanopaterno.it)). Vogliamo provare a sfruttare la potenzialità degli strumenti di streaming in nostro possesso per offirvi una giornata all'insegna delle esperienze di vita reale aziendale ai tempi del covid-19.
 
 ![dw2020](./splash.png)
+
+[Su Facebook](https://www.facebook.com/wearedigitalwarriors)
 
 Stiamo tutti vivendo un momento particolare e complesso. Uno di quei momenti che segnano tristemente la storia in maniera indelebile. Ma come spesso accade, dimostriamo la nostra forza reattiva. Da situazioni di questo tipo emergono tantissimi aspetti positivi derivanti da persone e iniziative. Come una fenice che rinasce dalle proprie ceneri, la nostra società risorge in termini di pensiero comune e controbatte ogni attacco inferto dall'ormai sottinteso virus.
 
@@ -37,6 +43,10 @@ In questo evento virtuale, avremo racconti e testimonianze dirette sul campo. St
 Ognuno di noi vuole portare valore aggiunto descrivendo come la propria realtà ha reagito al momento e perché alcune scelte sono state prese. Non capita spesso di avere persone che descrivono tutto ciò in un momento storico come quello che ha caratterizzato e sta caratterizzando gli ultimi mesi.
 
 Vogliamo condividere le reazioni ai problemi iniziali, le azioni correttive, gli strumenti applicati, il vivere giorno per giorno, la gestione di emergenze, pericoli, lavoro remoto, smart e le idee di gestione.
+
+## Logistica
+
+Ogni sessione ha un link che vi porterà in una stanza online nella quale seguire i nostri speaker. Nel caso in cui abbiate domande, siccome nel meeting non vi sarà la possibilità di intervenire in ogni momento, vi chiediamo di scrivere le vostre domande nel pannello di chat appositamente predisposto. La sezione domande e risposte sarà disponibile a fine sessione.
 
 ## Grazie
 
