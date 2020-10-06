@@ -1,6 +1,6 @@
 ---
 title: "Gestire le versioni con gitversion - Introduzione"
-date: 2020-10-05T00:00:01+01:00
+date: 2020-10-09T00:00:01+01:00
 authors: ['danielepo']
 categories: 
 - "Devops pills"
