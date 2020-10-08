@@ -1,0 +1,25 @@
+DisplayName: Daniele Pozzobon
+ShortBio:
+  en: |
+    Passionate about all things software, from requirement gathering, all the way to the delivery of value to the client. 
+    Love teaching and coaching my team about better ways to develop and manage software. 
+  it: |
+    Sono appassionato di tutto ciò che ha a che fare con lo svilppo software, dalla raccolta dei requisiti al rilascio di valore al cliente.
+    
+Picture: "/images/_authors/danielepo.jpg"
+Social:
+  - Name: Twitter
+    Value: '@pozzobondaniele'
+    Url: https://twitter.com/pozzobondaniele
+  - Name: GitHub
+    Value: danielepo
+    Url: https://github.com/danielepo
+  - Name: SlideShare
+    Value: DanielePozzobon
+    Url:	http://www.slideshare.net/DanielePozzobon
+  - Name: Linkedin
+    Value: Daniele Pozzobon
+    Url: https://www.linkedin.com/in/danielepozzobon/
+  - Name: Personal blog
+    Value: https://codecleane.rs
+    Url: https://codecleane.rs
