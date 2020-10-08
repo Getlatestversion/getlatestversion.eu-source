@@ -65,7 +65,7 @@ Nel sito di documentazione di gitversion questo viene definito semplicemente com
 
 Come vi dicevo prima voglio usarlo localmente e successivamente vedremo altri metodi di utilizzo, quindi per trovare le istruzioni su come installarlo vado nella pagina "Getting started e poi Command line"
 
-Qua vedete che potete installare git version con Chocolatey se siete su windows oppure con homebrew se siete su Mac. Io sono su windows e quindi vi mostro come installarlo con chocolatey (per inciso, se non usate chocolatey non sapete cosa vi perdete)
+Qua vedete che é possibile installare git version con Chocolatey se siete su windows oppure con homebrew se siete su Mac. Io sono su windows e quindi vi mostro come installarlo con chocolatey (per inciso, se non usate chocolatey non sapete cosa vi perdete)
 
 Semplicemente apro powershell in modalità amministratore e lancio il commando `choco install gitversion.portable -y` e premo invio.  Possiamo vedere che l'istallazione è partita e una volta completata posso confermare che l'installazione sia andata a buon fine lanciando il comando  `gitversion /version`
 
