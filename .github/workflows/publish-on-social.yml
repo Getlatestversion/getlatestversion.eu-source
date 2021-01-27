@@ -1,0 +1,69 @@
+name: publish-on-social
+
+on:
+  push:
+    branches:
+      - master
+#  schedule:
+#    - cron: '0 4 * * *'
+
+jobs:
+  prepare-annunce:
+    runs-on: ubuntu-18.04
+    outputs:
+      langs: ${{ toJson(fromJson(steps.read-announce-data.outputs.response).posts.*.lang) }}
+      titles: ${{ toJson(fromJson(steps.read-announce-data.outputs.response).posts.*.title) }}
+      links: ${{ toJson(fromJson(steps.read-announce-data.outputs.response).posts.*.link) }}
+      dates: ${{ toJson(fromJson(steps.read-announce-data.outputs.response).posts.*.date) }}
+      summaries: ${{ toJson(fromJson(steps.read-announce-data.outputs.response).posts.*.summary) }}
+      authors: ${{ toJson(fromJson(steps.read-announce-data.outputs.response).posts.*.authors) }}  
+      counter: ${{ steps.count-post.outputs.counter }}
+    steps:
+      - name: Read from GLV site the annunces posts and article
+        uses: fjogeleit/http-request-action@master
+        id: read-announce-data
+        with:
+            url: '${{ secrets.GLV_SITE_ANNOUNCE_DATA }}'
+            method: 'GET'
+      - name: Count how posts are annunced 
+        id: count-post
+        run: |
+            POSTnumber=$(echo '${{ toJson(fromJson(steps.read-announce-data.outputs.response).posts.*.title) }}' | jq -c 'length')
+            POSTnumber=$(($POSTnumber - 1))
+            POSTcounter=$(echo "[ $(seq -s ", " 0 $POSTnumber) ]")
+            echo "::set-output name=counter::$POSTcounter"
+
+  publish-matrix:
+    needs: prepare-annunce
+    runs-on: ubuntu-18.04
+    env:
+      DEBUG: false
+    strategy:
+      matrix: 
+        counter: ${{fromJson(needs.prepare-annunce.outputs.counter)}}
+
+    steps:
+    - name: Verify Step
+      if: ${{env.DEBUG}}
+      run: |
+          echo ${{fromJson(needs.prepare-annunce.outputs.langs)[matrix.counter]}}
+          echo ${{fromJson(needs.prepare-annunce.outputs.titles)[matrix.counter]}}
+          echo ${{fromJson(needs.prepare-annunce.outputs.links)[matrix.counter]}}
+          echo ${{fromJson(needs.prepare-annunce.outputs.dates)[matrix.counter]}}
+          echo ${{fromJson(needs.prepare-annunce.outputs.summaries)[matrix.counter]}}
+          echo '${{toJson(fromJson(needs.prepare-annunce.outputs.authors)[matrix.counter])}}'
+
+    - name: Create linked social linked
+      id: make-message
+      run: |
+          echo "::set-output name=msgString::$(echo '${{fromJson(needs.prepare-annunce.outputs.titles)[matrix.counter]}} ${{fromJson(needs.prepare-annunce.outputs.links)[matrix.counter]}} by ${{join(fromJson(needs.prepare-annunce.outputs.authors)[matrix.counter].*.social.twitter.name, ', ')}}')"
+
+    - name: Send Tweet with for annunced post or article
+      id: annunced-post-tweeted
+      uses: ethomson/send-tweet-action@v1
+      with:
+        status: ${{steps.make-message.outputs.msgString}}
+        consumer-key: ${{ secrets.TWITTER_CONSUMER_API_KEY }}
+        consumer-secret: ${{ secrets.TWITTER_CONSUMER_API_SECRET }}
+        access-token: ${{ secrets.TWITTER_ACCESS_TOKEN }}
+        access-token-secret: ${{ secrets.TWITTER_ACCESS_TOKEN_SECRET }}      
