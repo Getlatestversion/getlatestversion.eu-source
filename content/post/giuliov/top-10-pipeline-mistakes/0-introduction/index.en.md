@@ -20,15 +20,14 @@ Let's start with my list of top 10 CI/CD pipeline issues.
 
 > **NOTE**:  
 > Published posts are in **bold**, the link for items in _italic_  does not work.  
-> Last update: 10 June 2020
+> Last update: 10 July 2020
 
  1.	[_Sloppy handling of Secrets_](../sloppy-secrets-handling) -- leaking or hard-coding passwords, tokens or similar sensitive data;
  2.	[_Untraceable artifacts_](../untraceable-artifacts) -- when builds produce (or worse: deploy!) binaries of unknown source and version; this is a major red flag because it is cheap and easy to fix, but it is usually overlooked causing a major technical debt pile-up;
  3.	[_Too specific_](../too-specific) -- if your artifacts are not scrubbed from environment-specific dependencies, so they cannot be deployed to all environments;
  4.	[_What, quality?_](../what-quality) -- when your pipeline does not contain any check on quality, what do you expect as a result?;
  5.	[_Bleeding edge_](../bleeding-edge) -- using the latest and greatest technology is not always a wise choice;
- 6.	[_Galactic Builds_](../galactic-builds) -- far-reaching builds that slow teams down instead of helping them;
- 7.	[**Flaky builds**](../flaky-builds) -- builds generating unreproducible behaviours or random artefacts;
+ 6.	[**Galactic Builds**](../../07/galactic-builds) -- far-reaching builds that slow teams down instead of helping them;
  7.	[**Flaky builds**](../../06/flaky-builds) -- builds generating unreproducible behaviours or random artefacts;
  8.	[_Too much of a good thing_](../too-much-of-a-good-thing) -- when you go too far to avoid the above mistakes, causing the fix to backfire;
  9.	[_Implicit assumption_](../implicit-assumption) -- any build that breaks when some undocumented environmental condition change;
