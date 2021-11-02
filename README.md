@@ -13,7 +13,7 @@ $env:AZURE_STORAGE_ACCOUNT="stagegetlatestversioneu"
 $env:AZURE_STORAGE_KEY="**********"
 $env:HUGO_ENVIRONMENT='staging'
 
-hugo --gc --cleanDestinationDir ; hugo deploy --maxDeletes -1
+hugo --gc --cleanDestinationDir --buildDrafts --buildFuture ; hugo deploy --maxDeletes -1
 
 rm -Recurse .\public\ ; md public ; hugo deploy --maxDeletes -1
 ```
