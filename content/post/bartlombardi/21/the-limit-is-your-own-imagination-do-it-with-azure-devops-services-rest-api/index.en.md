@@ -16,6 +16,8 @@ Azure DevOps is the platform signed by Microsoft that helps software factories t
 
 With Azure DevOps Release you can separate the delivery environments into groups, obtaining Dev, Test, Production environments and so on. Most of time, the pipelines are configured to release the artifacts related to the main branches. However, Azure DevOps doesn't allow to modify easily a specific release for a single target within a Deployment Group starting from different artifacts.
 
+# Automated through the Azure DevOps Services REST API
+
 Consider a Dev that needs to test a release in your VM with its own changes before merging on the main branch. This is onerous for him unless he's an Azure DevOps user, capable of modifying its DP, the branch where to download the artifacts, etc. It's possible to automate all the previous steps needed to launch a release only on your target environment, starting from a particular artifact.
 
 We have taken advantage of the API Rest made available by Azure DevOps through a script in PowerShell. Here there are the essential steps:
@@ -48,6 +50,8 @@ $UpdateEnvironmentsBody = ConvertTo-Json $UpdateEnvironmentsBody -Depth 10
 $UriOrga = "https://vsrm.dev.azure.com/<organization>/<project>/_apis/release/definitions?api-version=6.0"
 Invoke-RestMethod -Uri $UriOrga -Method Put -Headers $AzureDevOpsAuthenicationHeader -Body $UpdateEnvironmentsBody -ContentType application/json 
 ```
+
+# Conclusion
 
 Like any Azure service, Microsoft's DevOps counterpart can also be managed by a set of APIs that replicate everything that can be done through the portal. First you need to get a PAT (Personal Access Token) through which you can authenticate inside your organization.
 Then you can take advantage of any tool that invokes API Rest to do whatever you want, i.e. launching Release, creating or modifying Deployment Groups, starting specific Tests and so on. This can be a hint to create a user-friendly interface for developers not accustomed to DevOps. It could automate set of actions that would be otherwise onerous.
