@@ -8,7 +8,7 @@ tags:
 - azure devops rest api
 - powershell
 summary: "We have taken advantage of the API Rest made available by Azure DevOps through a script in PowerShell to perform release activities."
-publishDate: 2021-11-05T03:00:00+02:00
+publishDate: 2021-11-04T03:00:00+02:00
 ---
 
 
