@@ -18,7 +18,7 @@ With Azure DevOps Release you can separate the delivery environments into groups
 
 # Automated through the Azure DevOps Services REST API
 
-Consider each developer have VM on the deployment group and needs to test a release with its own changes before merging on the main branch. This is onerous for him unless he's an Azure DevOps user, capable of modifying its deployment group, the branch where to download the artifacts, etc. It's possible to automate all the previous steps needed to launch a release only on your target environment, starting from a particular artifact.
+Consider a scenario in which we have a DP called "integration" that collects 20 VMs, one for each developer. Through this DP we can use a Pipeline that deploys the latest version of the product to all the VMs at the same time. Anyway, more often a developer wants to test a release with his own changes before merging on the main branch. He needs to deploy his build to only his VM, without involving the others. It's onerous for him unless he's an Azure DevOps user, capable of modifying his deployment group, the branch where to download the artifacts, etc. It's possible to automate all the previous steps needed to launch a release only on your target environment, starting from a particular artifact.
 
 In the following the steps to achive it:
 1. set a new tag to the VM in the deployment group
