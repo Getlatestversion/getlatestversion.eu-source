@@ -14,17 +14,17 @@ publishDate: 2021-11-04T03:00:00+02:00
 
 Azure DevOps is the platform signed by Microsoft that helps software factories to improve the development process, automatic tests and frequent releases. Their aim is to have additional value for the end customer in terms of product quality.
 
-With Azure DevOps Release you can separate the delivery environments into groups, obtaining integration, acceptance, production environments and so on. Most of time, the pipelines are configured to release the artifacts related to the main branches. However, Azure DevOps doesn't allow to modify easily a specific release for a single target within a Deployment Group starting from different artifacts.
+With Azure DevOps Release you can separate the delivery environments into groups, obtaining integration, acceptance, production environments and so on. Most of time, the pipelines are configured to release the artifacts related to the main branches. However, Azure DevOps doesn't allow to modify easily a specific release for a single target within a Deployment Group (DG) starting from different artifacts.
 
 # Automated through the Azure DevOps Services REST API
 
-Consider a scenario in which we have a DP called "integration" that collects 20 VMs, one for each developer. Through this DP we can use a Pipeline that deploys the latest version of the product to all the VMs at the same time. Anyway, more often a developer wants to test a release with his own changes before merging on the main branch. He needs to deploy his build to only his VM, without involving the others. It's onerous for him unless he's an Azure DevOps user, capable of modifying his deployment group, the branch where to download the artifacts, etc. It's possible to automate all the previous steps needed to launch a release only on your target environment, starting from a particular artifact.
+Consider a scenario in which we have a DG called "integration" that collects 20 virtual machines (VMs), one for each developer. Through this DG we can use a pipeline that deploys the latest version of the product to all the VMs at the same time. Anyway, more often a developer wants to test a release with his own changes before merging on the main branch. He needs to deploy his build to only his VM, without involving the others. It's onerous for him unless he's an Azure DevOps user, capable of modifying his deployment group, the branch where to download the artifacts, etc. It's possible to automate all the previous steps needed to launch a release only on your target environment, starting from a particular artifact.
 
 In the following the steps to achive it:
-1. set a new tag to the VM in the deployment group
+1. set a new tag to the VM in the DG
 2. put the tag into release pipeline
 3. launch the release pipeline
-4. remove the tag from deployment group and release pipeline
+4. remove the tag from DG and release pipeline
 
 We have taken advantage of the [Azure DevOps Services REST API](https://docs.microsoft.com/en-us/rest/api/azure/devops/?view=azure-devops-rest-6.1) made available by Azure DevOps through a script in PowerShell. 
 Here there are the essential steps:
